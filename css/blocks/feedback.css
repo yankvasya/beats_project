@@ -21,7 +21,7 @@
   background: #F8FAF9;
 }
 .feedbacks .feedback__img {
-  width: 253px;
+  max-width: 253px;
   height: 264px;
 }
 .feedbacks .feedback__info {
