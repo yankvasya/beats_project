@@ -1,0 +1,67 @@
+.why {
+  background: #fff;
+}
+.why .container {
+  padding: 103px 0 89px;
+}
+.why__head {
+  padding: 0 25%;
+}
+.why__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 52px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #292929;
+}
+.why__text {
+  margin-top: 18px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #666;
+  text-align: center;
+}
+.why__reasons {
+  margin-top: 62px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.why__reasons .reason {
+  text-align: center;
+  width: 276px;
+}
+.why__reasons .reason__img {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px;
+  background: #F2F5F4;
+  border-radius: 100%;
+}
+.why__reasons .reason__title {
+  margin-top: 24px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  color: #292929;
+}
+.why__reasons .reason__text {
+  margin-top: 7px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #666;
+}
