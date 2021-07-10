@@ -16,3 +16,6 @@
   color: #FFFFFF;
   text-transform: uppercase;
 }
+.button:hover {
+  background: #CA1B36;
+}

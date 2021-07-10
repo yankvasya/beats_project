@@ -2,11 +2,23 @@
   background: #F5F5F5;
 }
 .welcome .container {
+  position: relative;
   padding: 94px 0 50px;
   background-image: url(/img/headphones-header.png);
   background-position: bottom 52px right 99px;
   background-repeat: no-repeat;
   background-size: 489px;
+}
+.welcome .container::before {
+  content: "";
+  position: absolute;
+  width: 46.32px;
+  height: 10.38px;
+  right: 126px;
+  bottom: -5px;
+  background: #C4C4C4;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 .welcome__title {
   font-style: normal;
