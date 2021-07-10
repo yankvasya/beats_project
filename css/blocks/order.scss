@@ -1,0 +1,17 @@
+.order {
+    height: 100vh;
+    min-height: 650px;
+    display: flex;
+    background: #181818 center center/cover no-repeat;
+    align-items: center;
+
+    &__title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 52px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFF;
+    }
+}
