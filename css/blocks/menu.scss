@@ -1,0 +1,20 @@
+.menu {
+    flex: 1;
+    margin: 0 46px 0 38px;
+    & .menu__list {
+        display: flex;
+        justify-content: space-between;
+
+        & .menu__item {
+
+            & .menu__link {
+                font-family: Alegreya Sans;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 20px;
+                color: #292929;
+            }
+        }
+    }
+}

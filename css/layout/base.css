@@ -5,8 +5,7 @@
 }
 
 body {
-    font-family: 'Open Sans', Helvetica, sans-serif;
-    background-color: #17191C;
+    font-family: 'Play', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
@@ -24,7 +23,8 @@ body {
     margin: 0 auto;
 }
 
-ul li, a {
+ul li,
+a {
     text-decoration: none;
 }
 
@@ -43,7 +43,12 @@ table {
     border-spacing: 0;
 } */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
     font-weight: normal;
 }
