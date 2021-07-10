@@ -1,16 +1,26 @@
-.feedbacks .container {
-  padding: 64px 0;
+.feedbacks {
+  height: 100vh;
+  min-height: 650px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
-.feedbacks .container::before {
+.feedbacks::before {
   content: "";
   position: absolute;
   width: 35px;
   height: 35px;
-  left: 0px;
-  bottom: 0px;
+  left: 19%;
+  bottom: -2%;
   background: #868686;
   border-radius: 50%;
+}
+.feedbacks .container {
+  padding: 64px 0;
 }
 .feedbacks__all {
   margin-top: 32px;

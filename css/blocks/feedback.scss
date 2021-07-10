@@ -1,18 +1,23 @@
 .feedbacks {
+    height: 100vh;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        left: 19%;
+        bottom: -2%;
+        background: #868686;
+        border-radius: 50%;
+    }
+
     .container {
         padding: 64px 0;
-        position: relative;
-
-        &::before {
-            content: "";
-            position: absolute;
-            width: 35px;
-            height: 35px;
-            left: 0px;
-            bottom: 0px;
-            background: #868686;
-            border-radius: 50%;
-        }
     }
 
     &__all {
