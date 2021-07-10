@@ -1,24 +1,20 @@
 .welcome {
-    background: #F5F5F5;    
+    background: #F5F5F5;
+    height: 100vh;
+    min-height: 650px;
+    display: flex;
+
 
     .container {
-        position: relative;
+        // position: relative;
         padding: 94px 0 50px;
         background-image: url(/img/headphones-header.png);
         background-position: bottom 52px right 99px;
         background-repeat: no-repeat;
         background-size: 489px;
-
-        &::before {
-            content: "";
-            position: absolute;
-            width: 46.32px;
-            height: 10.38px;
-            right: 126px;
-            bottom: -5px;
-            background: #C4C4C4;
-            transform: rotate(-45deg);
-        }
+        // display: flex;
+        // flex-direction: column;
+        align-self: center;
     }
 
     &__title {
@@ -32,6 +28,11 @@
 
     &__text {
         margin-top: 22px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 21px;
+        line-height: 25px;
+        color: #292929;
     }
 
     .button {
