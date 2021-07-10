@@ -59,6 +59,19 @@
         .reason {
             text-align: center;
             width: 276px;
+            position: relative;
+
+            &::before {
+                content: url(/icons/shapes.png);
+                position: absolute;
+                top: 30px;
+                right: -17%;
+                transform: translateX(50%);
+            }
+
+            &:last-child::before {
+                display: none;
+            }
 
             &__img {
                 display: inline-flex;

@@ -58,6 +58,18 @@
 .why__reasons .reason {
   text-align: center;
   width: 276px;
+  position: relative;
+}
+.why__reasons .reason::before {
+  content: url(/icons/shapes.png);
+  position: absolute;
+  top: 30px;
+  right: -17%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+.why__reasons .reason:last-child::before {
+  display: none;
 }
 .why__reasons .reason__img {
   display: -webkit-inline-box;

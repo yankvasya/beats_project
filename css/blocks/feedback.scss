@@ -38,6 +38,21 @@
         padding: 42px;
         display: flex;
         background: #F8FAF9;
+        overflow: hidden;
+        position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 83px;
+            height: 83px;
+            background: #fff;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -61px;
+        }
 
         &__img {
             max-width: 253px;
@@ -89,8 +104,13 @@
             display: flex;
             justify-content: center;
 
-            & .person:nth-child(2) {
+            .person:nth-child(2) {
                 margin: 0 6px;
+            }
+
+            .person--active{
+                border: 4px solid #E01F3D;
+                border-radius: 103.759px;
             }
         }
     }
