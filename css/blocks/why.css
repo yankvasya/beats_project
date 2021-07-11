@@ -61,7 +61,7 @@
   position: relative;
 }
 .why__reasons .reason::before {
-  content: url(/icons/shapes.png);
+  content: url(../../icons/shapes.png);
   position: absolute;
   top: 30px;
   right: -17%;
