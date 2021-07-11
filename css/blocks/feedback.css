@@ -114,10 +114,17 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
+.feedbacks .feedback__select .person {
+  border: 4px solid transparent;
+}
 .feedbacks .feedback__select .person:nth-child(2) {
   margin: 0 6px;
 }
 .feedbacks .feedback__select .person--active {
+  border: 4px solid #E01F3D;
+  border-radius: 103.759px;
+}
+.feedbacks .feedback__select .person:hover {
   border: 4px solid #E01F3D;
   border-radius: 103.759px;
 }
