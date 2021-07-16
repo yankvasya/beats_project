@@ -1,6 +1,7 @@
 @import "./layout/normalize.css";
+@import "./layout/vars.scss";
 @import "./layout/base.scss";
-@import "./layout/fonts.scss";
+@import "./layout/fonts.css";
 @import "./blocks/hero.scss";
 @import "./blocks/header.scss";
 @import "./blocks/menu.scss";
@@ -15,5 +16,6 @@
 @import "./blocks/radio.scss";
 @import "./blocks/fixed-menu.scss";
 @import "./blocks/map.scss";
+@import "./blocks/footer.scss";
 @import "./blocks/social.scss";
 /* Проверка */
