@@ -1,61 +1,62 @@
 .radio {
-    display: flex;
-    cursor: pointer;
-    user-select: none;
+  display: flex;
+  cursor: pointer;
+  user-select: none;
 
-    &:first-child {
-        margin-right: 24px;
+  &:first-child {
+    margin-right: 24px;
+  }
+
+  &--checkbox {
+    margin-top: 16px;
+
+    .radio__visible {
+      border-radius: 0;
+
+      &:before {
+        background: url("/icons/checkbox.png") center center/contain no-repeat;
+      }
     }
 
-    &--checkbox {
-        margin-top: 16px;
-        .radio__visible {
-            border-radius: 0;
+  }
 
-            &:before {
-                background: url("/icons/checkbox.png") center center/contain no-repeat;
-            }
-        }
+  &__elem {
+    display: none;
 
+    &:checked~.radio__visible {
+      &::before {
+        display: block;
+      }
     }
+  }
 
-    &__elem {
-        display: none;
+  &__visible {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    border-radius: 50%;
+    background: #fff;
 
-        &:checked~.radio__visible {
-            &::before {
-                display: block;
-            }
-        }
+    &::before {
+      content: "";
+      width: 13px;
+      height: 13px;
+      background: #E01F3D;
+      border-radius: 50%;
+      position: absolute;
+      display: none;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
+  }
 
-    &__visible {
-        width: 25px;
-        height: 25px;
-        position: relative;
-        border-radius: 50%;
-        background: #fff;
-
-        &::before {
-            content: "";
-            width: 13px;
-            height: 13px;
-            background: #E01F3D;
-            border-radius: 50%;
-            position: absolute;
-            display: none;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-    }
-
-    &__title {
-        margin-left: 10px;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 19px;
-        color: #FFFFFF;
-    }
+  &__title {
+    margin-left: 10px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+  }
 }

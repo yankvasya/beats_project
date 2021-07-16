@@ -5,10 +5,11 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: relative;
 }
+
 .feedbacks::before {
   content: "";
   position: absolute;
@@ -19,12 +20,15 @@
   background: #868686;
   border-radius: 50%;
 }
+
 .feedbacks .container {
   padding: 64px 0;
 }
+
 .feedbacks__all {
   margin-top: 32px;
 }
+
 .feedbacks__title {
   font-style: normal;
   font-weight: bold;
@@ -34,6 +38,7 @@
   text-align: center;
   color: #292929;
 }
+
 .feedbacks .feedback {
   padding: 42px;
   display: -webkit-box;
@@ -43,6 +48,7 @@
   overflow: hidden;
   position: relative;
 }
+
 .feedbacks .feedback::before {
   content: "";
   display: block;
@@ -53,13 +59,15 @@
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   top: -61px;
 }
+
 .feedbacks .feedback__img {
   max-width: 253px;
   height: 264px;
 }
+
 .feedbacks .feedback__info {
   margin-left: 40px;
   padding: 32px 0 21px;
@@ -68,9 +76,10 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
+
 .feedbacks .feedback__title {
   font-style: normal;
   font-weight: bold;
@@ -78,11 +87,12 @@
   line-height: 28px;
   color: #292929;
 }
+
 .feedbacks .feedback__text {
   margin-right: 107px;
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   margin-top: 27px;
   font-style: normal;
   font-weight: normal;
@@ -90,6 +100,7 @@
   line-height: 19px;
   color: #666666;
 }
+
 .feedbacks .feedback__author {
   margin-top: 16px;
   display: -webkit-box;
@@ -102,6 +113,7 @@
   line-height: 21px;
   color: #292929;
 }
+
 .feedbacks .feedback__select {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -111,19 +123,23 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
+
 .feedbacks .feedback__select .person {
   border: 4px solid transparent;
 }
+
 .feedbacks .feedback__select .person:nth-child(2) {
   margin: 0 6px;
 }
+
 .feedbacks .feedback__select .person--active {
   border: 4px solid #E01F3D;
   border-radius: 103.759px;
 }
+
 .feedbacks .feedback__select .person:hover {
   border: 4px solid #E01F3D;
   border-radius: 103.759px;

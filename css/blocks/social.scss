@@ -1,27 +1,27 @@
 .social {
-    display: flex;
+  display: flex;
 
-    &__img {
-        width: 30px;
+  &__img {
+    width: 30px;
 
-        margin-right: 10px;
+    margin-right: 10px;
+  }
+
+  &__link {
+    &:last-child {
+      margin-right: 0;
     }
 
-    &__link {
-        &:last-child {
-            margin-right: 0;
-        }
-
-        &:hover {
-            .social__img {
-                filter: brightness(3%);
-                opacity: 1;
-                transform: scale(125%, 125%);
-            }
-        }
+    &:hover {
+      .social__img {
+        filter: brightness(3%);
+        opacity: 1;
+        transform: scale(125%, 125%);
+      }
     }
+  }
 }
 
 .img__facebook {
-    opacity: 0.35;
+  opacity: 0.35;
 }
