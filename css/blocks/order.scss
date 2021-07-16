@@ -6,9 +6,10 @@
   align-items: center;
 
   &__title {
+    $fontSize: 48px;
     font-style: normal;
     font-weight: bold;
-    font-size: 48px;
+    font-size: $fontSize; // 48
     line-height: 52px;
     text-align: center;
     text-transform: uppercase;

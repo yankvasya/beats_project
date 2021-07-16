@@ -25,9 +25,10 @@
   }
 
   &__title {
+    $fontSize: 48px;
     font-style: normal;
     font-weight: bold;
-    font-size: 48px;
+    font-size: $fontSize; // 48
     line-height: 52px;
     text-transform: uppercase;
     text-align: center;
@@ -69,7 +70,7 @@
     &__title {
       font-style: normal;
       font-weight: bold;
-      font-size: 24px;
+      font-size: $fontSize; // 24
       line-height: 28px;
       color: #292929;
     }
@@ -80,19 +81,20 @@
       margin-top: 27px;
       font-style: normal;
       font-weight: normal;
-      font-size: 16px;
+      font-size: $fontSize; // 16
       line-height: 19px;
       color: #666666;
 
     }
 
     &__author {
+      $fontSize: 18px;
       margin-top: 16px;
       display: flex;
       justify-self: flex-end;
       font-style: normal;
       font-weight: bold;
-      font-size: 18px;
+      font-size: $fontSize; // 18
       line-height: 21px;
       color: #292929;
 

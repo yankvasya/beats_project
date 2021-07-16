@@ -14,11 +14,11 @@
       content: ' ';
       position: absolute;
     }
-
+    $fontSize: 18px;
     margin-left: 6px;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
+    font-size: $fontSize; // 18
     line-height: 18px;
     color: #292929;
   }
