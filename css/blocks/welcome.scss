@@ -18,21 +18,19 @@
   }
 
   &__title {
-    $fontSize: 48px;
     font-style: normal;
     font-weight: bold;
-    font-size: $fontSize; // 48
+    font-size: 48px; // 48
     line-height: 52px;
     text-transform: uppercase;
     color: #292929;
   }
 
   &__text {
-    $fontSize: 21px;
     margin-top: 22px;
     font-style: normal;
     font-weight: normal;
-    font-size: $fontSize; // 21
+    font-size: 21px; // 21
     line-height: 25px;
     color: #292929;
   }
@@ -55,7 +53,7 @@
         margin-left: 11px;
         font-style: normal;
         font-weight: normal;
-        font-size: $fontSize; // 16
+        font-size: 16px; // 16
         line-height: 18px;
         color: #292929;
 

@@ -9,11 +9,10 @@
     & .menu__item {
 
       & .menu__link {
-        $fontSize: 18px;
         font-family: Alegreya Sans;
         font-style: normal;
         font-weight: normal;
-        font-size: $fontSize; // 18
+        font-size: 18px; // 18
         line-height: 20px;
         color: #292929;
 
