@@ -267,7 +267,10 @@ img {
             justify-content: center;
   }
   .welcome__content:before {
-    content: url("../../img/tablets/headphones-header.png");
+    content: "";
+    background: url("../../img/tablets/headphones-header.png") center center/contain no-repeat;
+    height: 20.1875rem;
+    width: 20.1875rem;
   }
 }
 @media screen and (max-width: 480px) {

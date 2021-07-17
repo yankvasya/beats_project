@@ -39,13 +39,17 @@
       justify-content: center;
 
       &:before {
-        content: url("../../img/tablets/headphones-header.png");
+        content: "";
+        background: url("../../img/tablets/headphones-header.png") center center/contain no-repeat;
+        height: rem(323px);
+        width: rem(323px);
+
       }
     }
 
     @include phones {
       justify-content: flex-start;
-     margin-top: rem(100px);
+      margin-top: rem(100px);
     }
   }
 
