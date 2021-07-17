@@ -42,6 +42,10 @@
         content: url("../../img/tablets/headphones-header.png");
       }
     }
+
+    @include phones {
+     margin-top: rem(-80px);
+    }
   }
 
   &__title {
@@ -56,6 +60,10 @@
       margin-top: rem(64px);
       padding: 0 8%;
     }
+
+    @include phones {
+      padding: 0 2%;
+    }
   }
 
   &__text {
@@ -68,6 +76,10 @@
 
     @include tablets {
       padding: 0 24%;
+    }
+
+    @include tablets {
+      padding: 0 10%;
     }
   }
 
