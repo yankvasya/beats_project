@@ -768,7 +768,7 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: url("../../img/form-bg.jpg") center center/cover no-repeat;
+  background: url("../img/form-bg.jpg") center center/cover no-repeat;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
