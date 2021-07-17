@@ -66,6 +66,10 @@
         top: rem(30px);
         right: -17%;
         transform: translateX(50%);
+
+        @include tablets {
+          content: "";
+        }
       }
 
       &:last-child::before {

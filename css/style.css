@@ -459,6 +459,11 @@ img {
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
 }
+@media screen and (max-width: 768px) {
+  .why__reasons .reason::before {
+    content: "";
+  }
+}
 .why__reasons .reason:last-child::before {
   display: none;
 }
