@@ -35,7 +35,7 @@
   }
 
   .feedback {
-    padding: rem(42px);
+    padding: rem(42px) ;
     display: flex;
     background: #F8FAF9;
     overflow: hidden;
@@ -45,7 +45,7 @@
       flex-direction: column;
       text-align: center;
       align-items: center;
-      padding: rem(42px) rem(24px) ;
+      padding: rem(46px) rem(24px) rem(30px);
     }
 
     &::before {
