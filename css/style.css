@@ -483,6 +483,13 @@ img {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
+@media screen and (max-width: 768px) {
+  .why__reasons {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
 @media screen and (max-width: 480px) {
   .why__reasons {
     -webkit-box-orient: vertical;
@@ -499,6 +506,11 @@ img {
   width: 17.25rem;
   position: relative;
 }
+@media screen and (max-width: 768px) {
+  .why__reasons .reason {
+    width: 14.0625rem;
+  }
+}
 @media screen and (max-width: 480px) {
   .why__reasons .reason {
     display: -webkit-inline-box;
@@ -514,7 +526,7 @@ img {
   }
 }
 .why__reasons .reason::before {
-  content: url(../../icons/shapes.png);
+  content: url(../icons/shapes.png);
   position: absolute;
   top: 1.875rem;
   right: -17%;
@@ -556,6 +568,11 @@ img {
   font-size: 1.5rem;
   line-height: 1.75rem;
   color: #292929;
+}
+@media screen and (max-width: 768px) {
+  .why__reasons .reason__title {
+    font-size: 1.375rem;
+  }
 }
 @media screen and (max-width: 480px) {
   .why__reasons .reason__title {
@@ -931,7 +948,7 @@ img {
   border-radius: 0;
 }
 .radio--checkbox .radio__visible:before {
-  background: url("/icons/checkbox.png") center center/contain no-repeat;
+  background: url("../icons/checkbox.png") center center/contain no-repeat;
 }
 .radio__elem {
   display: none;
