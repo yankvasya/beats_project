@@ -4,12 +4,15 @@
   &::before {
     content: "";
     position: absolute;
-    width: rem(32px);
-    height: rem(38px);
+    width: rem(10px);
+    height: rem(46px);
     right: rem(126px);
-    bottom: rem(-2px);
+    bottom: rem(-18px);
     background: #C4C4C4;
-    transform: rotate(-45deg);
+    transform: rotate(45deg);
 
+    @include tablets {
+      // display: none;
+    }
   }
 }

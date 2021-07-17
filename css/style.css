@@ -11,6 +11,16 @@
 html {
   font-size: 16px;
 }
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
 
 html, body {
   height: 100%;
@@ -81,18 +91,22 @@ img {
 .hero::before {
   content: "";
   position: absolute;
-  width: 2rem;
-  height: 2.375rem;
+  width: 0.625rem;
+  height: 2.875rem;
   right: 7.875rem;
-  bottom: -0.125rem;
+  bottom: -1.125rem;
   background: #C4C4C4;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
-
 .header {
   background: #F5F5F5;
   padding-top: 1.5rem;
+}
+@media screen and (max-width: 768px) {
+  .header__phone--number {
+    display: none;
+  }
 }
 .header .container {
   display: -webkit-box;
@@ -112,12 +126,22 @@ img {
           flex: 1;
   margin: 0 2.875rem 0 2.375rem;
 }
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+}
 .menu .menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.menu .menu__list .menu__item {
+  margin-bottom: 0.3125rem;
 }
 .menu .menu__list .menu__item .menu__link {
   font-family: Alegreya Sans;
@@ -126,6 +150,7 @@ img {
   font-size: 1.125rem;
   line-height: 1.25rem;
   color: #292929;
+  white-space: nowrap;
 }
 .menu .menu__list .menu__item .menu__link:hover {
   text-decoration: underline;
@@ -146,6 +171,8 @@ img {
 }
 .contacts__phone {
   position: relative;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   margin-left: 0.375rem;
   font-style: normal;
   font-weight: normal;
@@ -162,9 +189,36 @@ img {
   position: absolute;
 }
 
+.hamburger {
+  margin-right: 2%;
+  width: 26px;
+  height: 22px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+}
+.hamburger__plank {
+  display: block;
+  background: #000;
+  height: 4px;
+  border-radius: 12px;
+}
+
 .welcome {
   background: #F5F5F5;
-  height: 100vh;
+  height: 94vh;
   min-height: 40.625rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -173,15 +227,48 @@ img {
 .welcome .container {
   padding: 5.875rem 0 3.125rem;
   background-image: url(../../img/headphones-header.png);
-  background-position: bottom 3.25rem right 6.1875rem;
+  background-position: bottom 71% left 61%;
   background-repeat: no-repeat;
   background-size: 30.5625rem;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
 }
+@media screen and (max-width: 768px) {
+  .welcome .container {
+    background: none;
+    padding: 0;
+    height: 100%;
+  }
+}
 .welcome__content {
   width: 33%;
+}
+@media screen and (max-width: 768px) {
+  .welcome__content {
+    height: 100%;
+    width: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .welcome__content:before {
+    content: url("../../img/tablets/headphones-header.png");
+  }
 }
 .welcome__title {
   font-style: normal;
@@ -191,6 +278,12 @@ img {
   text-transform: uppercase;
   color: #292929;
 }
+@media screen and (max-width: 768px) {
+  .welcome__title {
+    margin-top: 4rem;
+    padding: 0 8%;
+  }
+}
 .welcome__text {
   margin-top: 1.375rem;
   font-style: normal;
@@ -198,6 +291,11 @@ img {
   font-size: 1.3125rem;
   line-height: 1.5625rem;
   color: #292929;
+}
+@media screen and (max-width: 768px) {
+  .welcome__text {
+    padding: 0 24%;
+  }
 }
 .welcome .button {
   margin-top: 2.25rem;
@@ -210,6 +308,11 @@ img {
       -ms-flex-align: end;
           align-items: flex-end;
   margin-top: 4.375rem;
+}
+@media screen and (max-width: 768px) {
+  .welcome__advantages {
+    display: none;
+  }
 }
 .welcome__advantages .advantage {
   width: 10.375rem;

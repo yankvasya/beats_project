@@ -5,6 +5,7 @@
 
   &__phone {
     position: relative;
+    flex-shrink: 0;
 
     &:before {
       display: block;
@@ -14,6 +15,7 @@
       content: ' ';
       position: absolute;
     }
+
     margin-left: rem(6px);
     font-style: normal;
     font-weight: normal;

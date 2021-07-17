@@ -2,6 +2,12 @@
   background: #F5F5F5;
   padding-top: rem(24px);
 
+  &__phone--number {
+    @include tablets {
+      display: none;
+    }
+  }
+ 
   & .container {
     display: flex;
     justify-content: space-between;
