@@ -6,26 +6,32 @@
 }
 
   &__img {
-    width: rem(30px);
-
     margin-right: rem(10px);
   }
 
+  &__img.img__telegram {
+    margin-right: 0;
+  }
+
   &__link {
+    height: 30px;
+    width: 30;
     &:last-child {
       margin-right: 0;
     }
+  }
+
+  svg {
+    width: 30px;
+    height: 30px;
+    fill: #B3B3B3;
 
     &:hover {
-      .social__img {
-        filter: brightness(3%);
-        opacity: 1;
-        transform: scale(125%, 125%);
-      }
+      fill: black;
+      transform: scale(125%, 125%);
     }
   }
 }
 
-.img__facebook {
-  opacity: 0.35;
-}
+
+

@@ -33,6 +33,22 @@
         flex-direction: row;
         margin-top: rem(3px);
 
+        &:hover {
+          svg {
+            fill: red;
+          }
+        }
+
+        svg {
+          margin-top: rem(4px);
+          width: 14px;
+          height: 14px;
+          fill: #292929;
+          // &:hover {
+          //   fill: red;
+          // }
+        }
+
         @include phones {
           margin-top: rem(12px);
         }

@@ -103,6 +103,12 @@ img {
   background: #F5F5F5;
   padding-top: 1.5rem;
 }
+.header__phone--number svg {
+  margin-top: 0.375rem;
+  width: 14px;
+  height: 14px;
+  fill: #292929;
+}
 @media screen and (max-width: 768px) {
   .header__phone--number {
     display: none;
@@ -168,6 +174,16 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.contacts:hover a {
+  color: red;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+.contacts:hover svg {
+  fill: red;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 .contacts__phone {
   position: relative;
@@ -526,7 +542,7 @@ img {
   }
 }
 .why__reasons .reason::before {
-  content: url(../icons/shapes.png);
+  content: url(../icons/shapes.svg);
   position: absolute;
   top: 1.875rem;
   right: -17%;
@@ -948,7 +964,7 @@ img {
   border-radius: 0;
 }
 .radio--checkbox .radio__visible:before {
-  background: url("../icons/checkbox.png") center center/contain no-repeat;
+  background: url("../icons/checkbox.svg") center center/contain no-repeat;
 }
 .radio__elem {
   display: none;
@@ -1085,6 +1101,15 @@ img {
           flex-direction: row;
   margin-top: 0.1875rem;
 }
+.footer__content .contacts .contact:hover svg {
+  fill: red;
+}
+.footer__content .contacts .contact svg {
+  margin-top: 0.25rem;
+  width: 14px;
+  height: 14px;
+  fill: #292929;
+}
 @media screen and (max-width: 480px) {
   .footer__content .contacts .contact {
     margin-top: 0.75rem;
@@ -1102,22 +1127,27 @@ img {
   }
 }
 .social__img {
-  width: 1.875rem;
   margin-right: 0.625rem;
+}
+.social__img.img__telegram {
+  margin-right: 0;
+}
+.social__link {
+  height: 30px;
+  width: 30;
 }
 .social__link:last-child {
   margin-right: 0;
 }
-.social__link:hover .social__img {
-  -webkit-filter: brightness(3%);
-          filter: brightness(3%);
-  opacity: 1;
+.social svg {
+  width: 30px;
+  height: 30px;
+  fill: #B3B3B3;
+}
+.social svg:hover {
+  fill: black;
   -webkit-transform: scale(125%, 125%);
           transform: scale(125%, 125%);
-}
-
-.img__facebook {
-  opacity: 0.35;
 }
 
 /* Проверка */

@@ -3,6 +3,16 @@
   padding-top: rem(24px);
 
   &__phone--number {
+    svg {
+      margin-top: rem(6px);
+      width: 14px;
+      height: 14px;
+      fill: #292929;
+      // &:hover {
+      //   fill: red;
+      // }
+    }
+
     @include tablets {
       display: none;
     }
