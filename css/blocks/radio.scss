@@ -10,6 +10,10 @@
   &--checkbox {
     margin-top: rem(16px);
 
+    @include tablets {
+      margin-top: rem(23px);
+    }
+
     .radio__visible {
       border-radius: 0;
 

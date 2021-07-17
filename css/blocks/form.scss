@@ -37,6 +37,10 @@
     border: rem(3px) solid transparent;
     border-radius: rem(4px);
 
+    @include tablets {
+      padding: rem(8px) rem(10px);
+    }
+
     &:focus {
       border: rem(3px) solid #E01F3D;
       outline: none;
@@ -46,6 +50,11 @@
       height: rem(152px);
       resize: none;
       margin-bottom: rem(36px);
+
+      @include tablets {
+        margin-bottom: rem(22px);
+        height: rem(82px);
+      }
     }
   }
 

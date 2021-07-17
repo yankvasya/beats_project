@@ -13,6 +13,10 @@
   color: #FFFFFF;
   text-transform: uppercase;
 
+  @include tablets {
+    padding: rem(21px) rem(41px);
+  }
+
   &:hover {
     background: #CA1B36;
   }
