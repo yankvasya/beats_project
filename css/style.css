@@ -420,6 +420,16 @@ img {
 .why__head {
   padding: 0 25%;
 }
+@media screen and (max-width: 768px) {
+  .why__head {
+    padding: 0 12%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .why__head {
+    padding: 0 10%;
+  }
+}
 .why__title {
   font-style: normal;
   font-weight: bold;
@@ -428,6 +438,16 @@ img {
   text-align: center;
   text-transform: uppercase;
   color: #292929;
+}
+@media screen and (max-width: 768px) {
+  .why__title {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .why__title {
+    font-size: 2rem;
+  }
 }
 .why__text {
   margin-top: 1.125rem;
@@ -446,10 +466,35 @@ img {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
+@media screen and (max-width: 480px) {
+  .why__reasons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 .why__reasons .reason {
   text-align: center;
   width: 17.25rem;
   position: relative;
+}
+@media screen and (max-width: 480px) {
+  .why__reasons .reason {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .why__reasons .reason:nth-child(2) {
+    margin: 1.875rem 0;
+  }
 }
 .why__reasons .reason::before {
   content: url(../../icons/shapes.png);
@@ -478,6 +523,14 @@ img {
   background: #F2F5F4;
   border-radius: 100%;
 }
+@media screen and (max-width: 480px) {
+  .why__reasons .reason__img {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
 .why__reasons .reason__title {
   margin-top: 1.5rem;
   font-style: normal;
@@ -485,6 +538,17 @@ img {
   font-size: 1.5rem;
   line-height: 1.75rem;
   color: #292929;
+}
+@media screen and (max-width: 480px) {
+  .why__reasons .reason__title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
 }
 .why__reasons .reason__text {
   margin-top: 0.4375rem;
@@ -494,6 +558,17 @@ img {
   line-height: 1.1875rem;
   text-align: center;
   color: #666;
+}
+@media screen and (max-width: 480px) {
+  .why__reasons .reason__text {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
 }
 
 .feedbacks {
