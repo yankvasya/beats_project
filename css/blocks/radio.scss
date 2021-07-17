@@ -4,11 +4,11 @@
   user-select: none;
 
   &:first-child {
-    margin-right: 24px;
+    margin-right: rem(24px);
   }
 
   &--checkbox {
-    margin-top: 16px;
+    margin-top: rem(16px);
 
     .radio__visible {
       border-radius: 0;
@@ -31,16 +31,16 @@
   }
 
   &__visible {
-    width: 25px;
-    height: 25px;
+    width: rem(25px);
+    height: rem(25px);
     position: relative;
     border-radius: 50%;
     background: #fff;
 
     &::before {
       content: "";
-      width: 13px;
-      height: 13px;
+      width: rem(13px);
+      height: rem(13px);
       background: #E01F3D;
       border-radius: 50%;
       position: absolute;
@@ -52,11 +52,11 @@
   }
 
   &__title {
-    margin-left: 10px;
+    margin-left: rem(10px);
     font-style: normal;
     font-weight: normal;
-    font-size: 16px; // 16
-    line-height: 19px;
+    font-size: rem(16px); // 16
+    line-height: rem(19px);
     color: #FFFFFF;
   }
 }

@@ -1,6 +1,6 @@
 .menu {
   flex: 1;
-  margin: 0 46px 0 38px;
+  margin: 0 rem(46px) 0 rem(38px);
 
   & .menu__list {
     display: flex;
@@ -12,8 +12,8 @@
         font-family: Alegreya Sans;
         font-style: normal;
         font-weight: normal;
-        font-size: 18px; // 18
-        line-height: 20px;
+        font-size: rem(18px); // 18
+        line-height: rem(20px);
         color: #292929;
 
         &:hover {

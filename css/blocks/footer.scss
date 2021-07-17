@@ -1,6 +1,6 @@
 .footer {
-  margin-top: 20px;
-  padding-bottom: 18px;
+  margin-top: rem(20px);
+  padding-bottom: rem(18px);
   .container {
     display: flex;
 
@@ -19,7 +19,7 @@
       .contact {
         display: flex;
         flex-direction: row;
-        margin-top: 3px;
+        margin-top: rem(3px);
       }
     }
   }

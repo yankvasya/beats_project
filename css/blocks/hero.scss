@@ -4,10 +4,10 @@
   &::before {
     content: "";
     position: absolute;
-    width: 32px;
-    height: 38px;
-    right: 126px;
-    bottom: -2px;
+    width: rem(32px);
+    height: rem(38px);
+    right: rem(126px);
+    bottom: rem(-2px);
     background: #C4C4C4;
     transform: rotate(-45deg);
 

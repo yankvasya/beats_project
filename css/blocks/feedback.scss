@@ -1,6 +1,6 @@
 .feedbacks {
   height: 100vh;
-  min-height: 650px;
+  min-height: rem(650px);
   display: flex;
   align-items: center;
   position: relative;
@@ -8,8 +8,8 @@
   &::before {
     content: "";
     position: absolute;
-    width: 35px;
-    height: 35px;
+    width: rem(35px);
+    height: rem(35px);
     left: 19%;
     bottom: -2%;
     background: #868686;
@@ -17,25 +17,25 @@
   }
 
   .container {
-    padding: 64px 0;
+    padding: rem(64px) 0;
   }
 
   &__all {
-    margin-top: 32px;
+    margin-top: rem(32px);
   }
 
   &__title {
     font-style: normal;
     font-weight: bold;
-    font-size: 48px; // 48
-    line-height: 52px;
+    font-size: rem(48px); // 48
+    line-height: rem(52px);
     text-transform: uppercase;
     text-align: center;
     color: #292929;
   }
 
   .feedback {
-    padding: 42px;
+    padding: rem(42px);
     display: flex;
     background: #F8FAF9;
     overflow: hidden;
@@ -44,24 +44,24 @@
     &::before {
       content: "";
       display: block;
-      width: 83px;
-      height: 83px;
+      width: rem(83px);
+      height: rem(83px);
       background: #fff;
       border-radius: 50%;
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      top: -61px;
+      top: rem(-61px);
     }
 
     &__img {
-      max-width: 253px;
-      height: 264px;
+      max-width: rem(253px);
+      height: rem(264px);
     }
 
     &__info {
-      margin-left: 40px;
-      padding: 32px 0 21px;
+      margin-left: rem(40px);
+      padding: rem(32px) 0 rem(21px);
       display: flex;
       flex-direction: column;
     }
@@ -69,56 +69,56 @@
     &__title {
       font-style: normal;
       font-weight: bold;
-      font-size: 24px; // 24
-      line-height: 28px;
+      font-size: rem(24px); // 24
+      line-height: rem(28px);
       color: #292929;
     }
 
     &__text {
-      margin-right: 107px;
+      margin-right: rem(107px);
       flex: 1;
-      margin-top: 27px;
+      margin-top: rem(27px);
       font-style: normal;
       font-weight: normal;
-      font-size: 16px; // 16
-      line-height: 19px;
+      font-size: rem(16px); // 16
+      line-height: rem(19px);
       color: #666666;
 
     }
 
     &__author {
-      margin-top: 16px;
+      margin-top: rem(16px);
       display: flex;
       justify-self: flex-end;
       font-style: normal;
       font-weight: bold;
-      font-size: 18px; // 18
-      line-height: 21px;
+      font-size: rem(18px); // 18
+      line-height: rem(21px);
       color: #292929;
 
     }
 
     &__select {
       display: inline-flex;
-      margin-top: 15px;
+      margin-top: rem(15px);
       display: flex;
       justify-content: center;
 
       .person {
-        border: 4px solid transparent;
+        border: rem(4px) solid transparent;
 
         &:nth-child(2) {
-          margin: 0 6px;
+          margin: 0 rem(6px);
         }
 
         &--active {
-          border: 4px solid #E01F3D;
-          border-radius: 103px;
+          border: rem(4px) solid #E01F3D;
+          border-radius: rem(103px);
         }
 
         &:hover {
-          border: 4px solid #E01F3D;
-          border-radius: 103px;
+          border: rem(4px) solid #E01F3D;
+          border-radius: rem(103px);
         }
       }
     }

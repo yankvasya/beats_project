@@ -1,6 +1,6 @@
 .why {
   height: 100vh;
-  min-height: 650px;
+  min-height: rem(650px);
   display: flex;
   position: relative;
   align-items: center;
@@ -13,13 +13,13 @@
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 32px 32px 0 0;
+    border-width: rem(32px) rem(32px) 0 0;
     border-color: #E01F3D transparent transparent transparent;
     transform: rotate(25deg);
   }
 
   .container {
-    padding: 103px 0 89px;
+    padding: rem(103px) 0 rem(89px);
     position: relative;
 
 
@@ -33,37 +33,37 @@
   &__title {
     font-style: normal;
     font-weight: bold;
-    font-size: 48px; // 48
-    line-height: 52px;
+    font-size: rem(48px); // 48
+    line-height: rem(52px);
     text-align: center;
     text-transform: uppercase;
     color: #292929;
   }
 
   &__text {
-    margin-top: 18px;
+    margin-top: rem(18px);
     font-style: normal;
     font-weight: normal;
-    font-size: 16px; // 16
-    line-height: 19px;
+    font-size: rem(16px); // 16
+    line-height: rem(19px);
     color: #666;
     text-align: center;
   }
 
   &__reasons {
-    margin-top: 62px;
+    margin-top: rem(62px);
     display: flex;
     justify-content: space-around;
 
     .reason {
       text-align: center;
-      width: 276px;
+      width: rem(276px);
       position: relative;
 
       &::before {
         content: url(../../icons/shapes.png);
         position: absolute;
-        top: 30px;
+        top: rem(30px);
         right: -17%;
         transform: translateX(50%);
       }
@@ -75,26 +75,26 @@
       &__img {
         display: inline-flex;
         justify-content: center;
-        padding: 30px;
+        padding: rem(30px);
         background: #F2F5F4;
         border-radius: 100%;
       }
 
       &__title {
-        margin-top: 24px;
+        margin-top: rem(24px);
         font-style: normal;
         font-weight: bold;
-        font-size: 24px; // 24
-        line-height: 28px;
+        font-size: rem(24px); // 24
+        line-height: rem(28px);
         color: #292929;
       }
 
       &__text {
-        margin-top: 7px;
+        margin-top: rem(7px);
         font-style: normal;
         font-weight: normal;
-        font-size: 16px; // 16
-        line-height: 19px;
+        font-size: rem(16px); // 16
+        line-height: rem(19px);
         text-align: center;
         color: #666;
       }

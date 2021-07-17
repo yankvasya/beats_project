@@ -1,17 +1,17 @@
 .welcome {
   background: #F5F5F5;
   height: 100vh;
-  min-height: 650px;
+  min-height: rem(650px);
   display: flex;
 
 
   .container {
     // position: relative;
-    padding: 94px 0 50px;
+    padding: rem(94px) 0 rem(50px);
     background-image: url(../../img/headphones-header.png);
-    background-position: bottom 52px right 99px;
+    background-position: bottom rem(52px) right rem(99px);
     background-repeat: no-repeat;
-    background-size: 489px;
+    background-size: rem(489px);
     // display: flex;
     // flex-direction: column;
     align-self: center;
@@ -20,53 +20,53 @@
   &__title {
     font-style: normal;
     font-weight: bold;
-    font-size: 48px; // 48
-    line-height: 52px;
+    font-size: rem(48px); // 48
+    line-height: rem(52px);
     text-transform: uppercase;
     color: #292929;
   }
 
   &__text {
-    margin-top: 22px;
+    margin-top: rem(22px);
     font-style: normal;
     font-weight: normal;
-    font-size: 21px; // 21
-    line-height: 25px;
+    font-size: rem(21px); // 21
+    line-height: rem(25px);
     color: #292929;
   }
 
   .button {
-    margin-top: 36px;
+    margin-top: rem(36px);
   }
 
   &__advantages {
     display: flex;
     align-items: flex-end;
-    margin-top: 70px;
+    margin-top: rem(70px);
 
     .advantage {
-      width: 166px;
-      height: 56px;
+      width: rem(166px);
+      height: rem(56px);
       display: flex;
 
       &__text {
-        margin-left: 11px;
+        margin-left: rem(11px);
         font-style: normal;
         font-weight: normal;
-        font-size: 16px; // 16
-        line-height: 18px;
+        font-size: rem(16px); // 16
+        line-height: rem(18px);
         color: #292929;
 
       }
 
       &__icon {
-        width: 41px;
-        height: 41px;
+        width: rem(41px);
+        height: rem(41px);
       }
     }
 
     .advantage:nth-child(2) {
-      margin: 0 8px;
+      margin: 0 rem(8px);
     }
   }
 }

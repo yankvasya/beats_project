@@ -1,12 +1,12 @@
 .button {
   border: none;
-  padding: 18px 41px;
+  padding: rem(18px) rem(41px);
   background: #E01F3D;
-  border-radius: 100px;
+  border-radius: rem(100px);
   font-style: normal;
   font-weight: bold;
-  font-size: 16px; // 16
-  line-height: 18px;
+  font-size: rem(16px); // 16
+  line-height: rem(18px);
   display: inline-flex;
   align-items: flex-end;
   text-align: center;
