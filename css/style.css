@@ -193,7 +193,7 @@ img {
   color: red;
 }
 .contact:hover a img {
-  content: url("../../icons/phone-hover.png");
+  content: url("../icons/phone-hover.png");
   width: 14px;
   height: 15px;
 }
@@ -277,7 +277,7 @@ img {
   }
   .welcome__content:before {
     content: "";
-    background: url("../../img/tablets/headphones-header.png") center center/contain no-repeat;
+    background: url("../img/tablets/headphones-header.png") center center/contain no-repeat;
     height: 20.1875rem;
     width: 20.1875rem;
   }
