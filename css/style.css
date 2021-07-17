@@ -180,6 +180,9 @@ img {
       -ms-grid-row-align: center;
       align-self: center;
 }
+.welcome__content {
+  width: 33%;
+}
 .welcome__title {
   font-style: normal;
   font-weight: bold;

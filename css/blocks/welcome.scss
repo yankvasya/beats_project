@@ -17,6 +17,11 @@
     align-self: center;
   }
 
+  $headWidth: 33%;
+  &__content {
+    width: $headWidth;
+  }
+
   &__title {
     font-style: normal;
     font-weight: bold;
