@@ -41,6 +41,13 @@
     overflow: hidden;
     position: relative;
 
+    @include tablets {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      padding: rem(42px) rem(24px) ;
+    }
+
     &::before {
       content: "";
       display: block;
@@ -57,6 +64,11 @@
     &__img {
       max-width: rem(253px);
       height: rem(264px);
+
+      @include tablets {
+        max-width: rem(130px);
+        height: rem(130px);
+      }
     }
 
     &__info {
@@ -64,6 +76,11 @@
       padding: rem(32px) 0 rem(21px);
       display: flex;
       flex-direction: column;
+
+      @include tablets {
+        justify-self: center;
+        margin-left: 0;
+      }
     }
 
     &__title {
@@ -83,7 +100,11 @@
       font-size: rem(16px); // 16
       line-height: rem(19px);
       color: #666666;
-
+      
+      @include tablets {
+        justify-self: center;
+        margin-right: 0;
+      }
     }
 
     &__author {
@@ -96,6 +117,9 @@
       line-height: rem(21px);
       color: #292929;
 
+      @include tablets {
+        align-self: center;
+      }
     }
 
     &__select {

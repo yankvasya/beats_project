@@ -616,6 +616,19 @@ img {
   overflow: hidden;
   position: relative;
 }
+@media screen and (max-width: 768px) {
+  .feedbacks .feedback {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 2.625rem 1.5rem;
+  }
+}
 .feedbacks .feedback::before {
   content: "";
   display: block;
@@ -633,6 +646,12 @@ img {
   max-width: 15.8125rem;
   height: 16.5rem;
 }
+@media screen and (max-width: 768px) {
+  .feedbacks .feedback__img {
+    max-width: 8.125rem;
+    height: 8.125rem;
+  }
+}
 .feedbacks .feedback__info {
   margin-left: 2.5rem;
   padding: 2rem 0 1.3125rem;
@@ -643,6 +662,13 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+@media screen and (max-width: 768px) {
+  .feedbacks .feedback__info {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    margin-left: 0;
+  }
 }
 .feedbacks .feedback__title {
   font-style: normal;
@@ -663,6 +689,13 @@ img {
   line-height: 1.1875rem;
   color: #666666;
 }
+@media screen and (max-width: 768px) {
+  .feedbacks .feedback__text {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    margin-right: 0;
+  }
+}
 .feedbacks .feedback__author {
   margin-top: 1rem;
   display: -webkit-box;
@@ -674,6 +707,13 @@ img {
   font-size: 1.125rem;
   line-height: 1.3125rem;
   color: #292929;
+}
+@media screen and (max-width: 768px) {
+  .feedbacks .feedback__author {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
 }
 .feedbacks .feedback__select {
   display: -webkit-inline-box;
