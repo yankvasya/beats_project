@@ -25,13 +25,12 @@
     width: 30px;
     height: 30px;
     fill: #B3B3B3;
-
+    // overflow: visible;
     &:hover {
       fill: black;
       transform: scale(125%, 125%);
     }
   }
 }
-
 
 
