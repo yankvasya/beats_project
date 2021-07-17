@@ -4,12 +4,15 @@
   padding: 0;
 }
 
+html {
+  font-size: $fontSize;
+}
+
 html, body {
   height: 100%;
 }
 
 body {
-  font-size: $fontSize;
   font-family: 'Play', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

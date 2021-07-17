@@ -8,12 +8,15 @@
   padding: 0;
 }
 
+html {
+  font-size: 16px;
+}
+
 html, body {
   height: 100%;
 }
 
 body {
-  font-size: 16px;
   font-family: "Play", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -493,7 +496,7 @@ img {
 
 .order {
   height: 100vh;
-  min-height: 40.625rem;
+  min-height: 40.75rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
