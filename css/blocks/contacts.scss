@@ -24,3 +24,17 @@
     color: #292929;
   }
 }
+
+.contact {
+  &:hover {
+    a {
+      img {
+        content: url("../../icons/phone-hover.png");
+        width: 14px;
+        height: 15px;
+      }
+
+      color: red;
+    }
+  }
+}

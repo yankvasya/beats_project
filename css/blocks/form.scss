@@ -7,9 +7,18 @@
     padding: 0 18%;
   }
 
+  @include phones {
+    flex-direction: column;
+    padding: 0;
+  }
+
   &__col {
     flex: 1;
     margin-right: rem(20px);
+
+    @include phones {
+      margin-right: rem(11px);
+    }
   }
 
   &:last-child {
@@ -28,6 +37,12 @@
   &__block {
     flex: 1;
     margin-right: rem(20px);
+
+    // @include phones {
+    //   &:last-child {
+    //     margin-right: 0;
+    //   }
+    // }
   }
 
   &__input {
@@ -61,6 +76,10 @@
   &__controls {
     display: flex;
     flex-wrap: nowrap;
+
+    @include phones {
+      justify-content: center;
+    }
   }
 
   &__title {

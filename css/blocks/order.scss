@@ -13,5 +13,9 @@
     text-align: center;
     text-transform: uppercase;
     color: #FFF;
+    
+    @include phones {
+      font-size: rem(32px);
+    }
   }
 }

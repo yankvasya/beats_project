@@ -47,6 +47,7 @@
     @include tablets {
       font-size: rem(48px);
     }
+
     @include phones {
       font-size: rem(32px);
     }
@@ -112,7 +113,7 @@
 
         @include phones {
           flex-direction: row;
-
+          margin-right: rem(12px);
         }
       }
 
@@ -128,6 +129,8 @@
         @include phones {
           flex-direction: column;
           flex: 1;
+          text-align: left;
+
         }
       }
 
@@ -144,6 +147,8 @@
         @include phones {
           flex-direction: column;
           flex: 1;
+          text-align: left;
+
         }
       }
     }

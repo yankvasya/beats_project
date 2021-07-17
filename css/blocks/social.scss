@@ -1,6 +1,10 @@
 .social {
   display: flex;
 
+  @include phones {
+    margin-top: rem(19px);
+}
+
   &__img {
     width: rem(30px);
 
