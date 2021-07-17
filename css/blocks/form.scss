@@ -2,12 +2,21 @@
   margin-top: rem(58px);
   display: flex;
 
+  @include tablets {
+    flex-direction: column;
+    padding: 0 18%;
+  }
+
   &__col {
     flex: 1;
     margin-right: rem(20px);
   }
 
   &:last-child {
+    margin-right: 0;
+  }
+
+  @include tablets {
     margin-right: 0;
   }
 
@@ -42,7 +51,7 @@
 
   &__controls {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
 
   &__title {
@@ -56,5 +65,10 @@
 
   &__btns {
     margin-top: rem(48px);
+
+    @include tablets {
+      display: flex;
+      justify-content: center;
+    }
   }
 }
