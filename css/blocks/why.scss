@@ -113,6 +113,8 @@
       }
 
       &__img {
+        height: rem(128px);
+        width: rem(128px);
         display: inline-flex;
         justify-content: center;
         padding: rem(30px);

@@ -558,6 +558,8 @@ img {
   display: none;
 }
 .why__reasons .reason__img {
+  height: 8rem;
+  width: 8rem;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
