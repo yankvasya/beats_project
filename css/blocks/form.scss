@@ -17,7 +17,7 @@
     margin-right: rem(20px);
 
     @include phones {
-      margin-right: rem(11px);
+      margin-right: 0;
     }
   }
 
@@ -37,12 +37,10 @@
   &__block {
     flex: 1;
     margin-right: rem(20px);
+  }
 
-    // @include phones {
-    //   &:last-child {
-    //     margin-right: 0;
-    //   }
-    // }
+  .block--margin_zero {
+    margin-right: 0;
   }
 
   &__input {

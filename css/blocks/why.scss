@@ -96,6 +96,13 @@
         }
       }
 
+      &__content {
+        @include phones {
+          margin-left: rem(12px);
+          width: 60%;
+        }
+      }
+
       &::before {
         content: url(../icons/shapes.svg);
         position: absolute;
@@ -113,18 +120,13 @@
       }
 
       &__img {
-        height: rem(128px);
-        width: rem(128px);
+        height: 128px;
+        width: 128px;
         display: inline-flex;
         justify-content: center;
-        padding: rem(30px);
+        padding: 30px;
         background: #F2F5F4;
         border-radius: 100%;
-
-        @include phones {
-          flex-direction: row;
-          margin-right: rem(12px);
-        }
       }
 
       &__title {
