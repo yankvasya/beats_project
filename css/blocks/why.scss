@@ -143,6 +143,7 @@
 
 
         @include phones {
+          margin-top: 0;
           flex-direction: column;
           flex: 1;
           text-align: left;

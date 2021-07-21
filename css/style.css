@@ -591,6 +591,7 @@ img {
 }
 @media screen and (max-width: 480px) {
   .why__reasons .reason__title {
+    margin-top: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
