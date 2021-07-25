@@ -513,6 +513,7 @@ img {
   border-color: #E01F3D transparent transparent transparent;
   -webkit-transform: rotate(25deg);
           transform: rotate(25deg);
+  z-index: 1;
 }
 .why .container {
   padding: 6.4375rem 0 5.5625rem;
@@ -693,6 +694,7 @@ img {
 }
 
 .options {
+  position: relative;
   background: #F8FAF9;
   height: 100vh;
   min-height: 40.625rem;
@@ -705,6 +707,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 0;
 }
 .options .container {
   display: -webkit-box;
@@ -785,6 +788,17 @@ img {
 }
 .options__buy-btn {
   margin-left: 0.8125rem;
+}
+.options::before {
+  content: "";
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  right: 20%;
+  bottom: -1%;
+  background: #292929;
+  -webkit-transform: rotate(29.11deg);
+          transform: rotate(29.11deg);
 }
 
 .feedbacks {

@@ -1,10 +1,12 @@
 .options {
+  position: relative;
   background: #F8FAF9;
   height: 100vh;
   min-height: rem(650px);
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 0;
 
   .container {
     display: flex;
@@ -88,5 +90,16 @@
 
   &__buy-btn {
     margin-left: rem(13px);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: rem(24px);
+    height: rem(24px);
+    right: 20%;
+    bottom: -1%;
+    background: #292929;
+    transform: rotate(29.11deg);
   }
 }
