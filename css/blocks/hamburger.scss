@@ -16,4 +16,58 @@
     height: 4px;
     border-radius: 12px;
   }
+
+  &__all {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 666;
+    background: #666666;
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(36px);
+  }
+
+  &__close {
+    position: absolute; 
+    top: 5%;
+    right: 10%;
+    cursor: pointer;
+  }
+
+  &__content {
+    height: 100vh;
+    min-height: rem(650px);
+    padding: 20% 0;
+    text-align: center;
+    display: flex;
+    align-items:center;
+    flex: 1;
+  }
+
+  &__list {
+    height: calc(100vh - 192px);
+    display: flex;
+    flex: 1;
+    justify-content: center;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  &__link {
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+      opacity: .7;
+    }
+  }
 }
