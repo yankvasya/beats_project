@@ -10,11 +10,56 @@
 
   .container {
     display: flex;
+
+    @include tablets {
+      width: 90%;
+    }
   }
 
   &__all {
     padding: rem(95px) 0;
     display: flex;
+
+    @include tablets {
+      & {
+        flex-direction: column;
+        align-items: center;
+
+        &:after {
+          cursor: pointer;
+          position: absolute;
+          top: 28%;
+          left: rem(40px);
+          content: "";
+          width: 20px;
+          height: 38px;
+          background-image: url(../icons/left.svg);
+        }
+
+        &:before {
+          cursor: pointer;
+          position: absolute;
+          z-index: 3;
+          content: "";
+          top: 28%;
+          right: rem(40px);
+          width: 20px;
+          height: 38px;
+          background-image: url(../icons/right.svg);
+        }
+      }
+
+      @include phones {
+        &:before {
+          right: rem(20px);
+
+        }
+
+        &:after {
+          right: rem(20px);
+        }
+      }
+    }
   }
 
   &__img {
@@ -22,6 +67,18 @@
     width: rem(452px);
     height: rem(452px);
     border-radius: 50%;
+
+    @include tablets {
+      margin-right: 0;
+      width: rem(306px);
+      height: rem(306px);
+    }
+  }
+
+  @include tablets {
+    .options__icon {
+      display: none;
+    }
   }
 
   &__title {
@@ -32,6 +89,13 @@
     line-height: rem(42px);
     text-transform: uppercase;
     color: #292929;
+
+    @include tablets {
+      & {
+        text-align: center;
+        font-size: rem(28px);
+      }
+    }
   }
 
   p {
@@ -43,6 +107,11 @@
     font-size: rem(16px);
     line-height: rem(19px);
     color: #666666;
+
+    @include tablets {
+      text-align: center;
+      width: 100%;
+    }
   }
 
   span {
@@ -55,6 +124,10 @@
 
   &__details {
     display: flex;
+
+    @include tablets {
+      justify-content: center;
+    }
   }
 
   &__price {
@@ -72,6 +145,8 @@
     font-size: rem(16px);
     line-height: rem(19px);
     color: #666666;
+
+
   }
 
   &__weight {
@@ -86,10 +161,18 @@
   &__buy-info {
     margin-top: rem(24px);
     display: flex;
+
+    @include tablets {
+      justify-content: center;
+    }
   }
 
   &__buy-btn {
     margin-left: rem(13px);
+
+    @include tablets {
+      margin-left: rem(30px);
+    }
   }
 
   &::before {
@@ -101,5 +184,11 @@
     bottom: -1%;
     background: #292929;
     transform: rotate(29.11deg);
+  }
+
+  &__control {
+    @include tablets {
+      display: none;
+    }
   }
 }
