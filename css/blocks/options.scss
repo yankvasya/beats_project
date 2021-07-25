@@ -1,0 +1,92 @@
+.options {
+  background: #F8FAF9;
+  height: 100vh;
+  min-height: rem(650px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    display: flex;
+  }
+
+  &__all {
+    padding: rem(95px) 0;
+    display: flex;
+  }
+
+  &__img {
+    margin-right: rem(59px);
+    width: rem(452px);
+    height: rem(452px);
+    border-radius: 50%;
+  }
+
+  &__title {
+    margin-top: rem(25px);
+    font-style: normal;
+    font-weight: bold;
+    font-size: rem(36px);
+    line-height: rem(42px);
+    text-transform: uppercase;
+    color: #292929;
+  }
+
+  p {
+    width: rem(368px);
+    margin-top: rem(24px);
+    margin-bottom: rem(27px);
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(16px);
+    line-height: rem(19px);
+    color: #666666;
+  }
+
+  span {
+    font-style: normal;
+    font-weight: bold;
+    font-size: rem(18px);
+    line-height: rem(21px);
+    color: #000000;
+  }
+
+  &__details {
+    display: flex;
+  }
+
+  &__price {
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(36px);
+    line-height: rem(60px);
+    text-transform: uppercase;
+    color: #151515;
+  }
+
+  &__charging {
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(16px);
+    line-height: rem(19px);
+    color: #666666;
+  }
+
+  &__weight {
+    margin-left: rem(44px);
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(16px);
+    line-height: rem(19px);
+    color: #666666;
+  }
+
+  &__buy-info {
+    margin-top: rem(24px);
+    display: flex;
+  }
+
+  &__buy-btn {
+    margin-left: rem(13px);
+  }
+}
