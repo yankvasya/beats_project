@@ -7,7 +7,7 @@ hamburgerAll.classList.add('hamburger__all');
 const hamburgerClose = document.createElement('a');
 hamburgerClose.classList.add('hamburger__close');
 hamburgerAll.appendChild(hamburgerClose);
-hamburgerClose.innerHTML = `<img src="../icons/hamburger__close.svg">`;
+hamburgerClose.innerHTML = `<img src="./icons/hamburger__close.svg">`;
 
 const hamburgerContent = document.createElement('div');
 hamburgerAll.appendChild(hamburgerContent);
