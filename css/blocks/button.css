@@ -11,18 +11,21 @@
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   text-align: center;
   color: #FFFFFF;
   text-transform: uppercase;
 }
+
 .button:hover {
   background: #CA1B36;
 }
+
 .button--theme--transparent {
   background: transparent;
 }
+
 .button--theme--transparent:hover {
   background: transparent;
   color: #CA1B36;

@@ -1,27 +1,36 @@
 .social {
-    display: flex;
+  display: flex;
 
-    &__img {
-        width: 30px;
-
-        margin-right: 10px;
-    }
-
-    &__link {
-        &:last-child {
-            margin-right: 0;
-        }
-
-        &:hover {
-            .social__img {
-                filter: brightness(3%);
-                opacity: 1;
-                transform: scale(125%, 125%);
-            }
-        }
-    }
+  @include phones {
+    margin-top: rem(19px);
 }
 
-.img__facebook {
-    opacity: 0.35;
+  &__img {
+    margin-right: rem(10px);
+  }
+
+  &__img.img__telegram {
+    margin-right: 0;
+  }
+
+  &__link {
+    height: 30px;
+    // width: 30px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  svg {
+    width: 30px;
+    height: 30px;
+    fill: #B3B3B3;
+    // overflow: visible;
+    &:hover {
+      fill: black;
+      transform: scale(125%, 125%);
+    }
+  }
 }
+
+

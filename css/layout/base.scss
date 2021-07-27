@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: $fontSize;
+
+  @include tablets {
+    font-size: $fontSize - 1px;
+  }
+
+  @include phones {
+    font-size: $fontSize - 2px;
+  }
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Play', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  width: 95%;
+  max-width: $containerWidth;
+  margin: 0 auto;
+  position: relative;
+}
+
+ul li,
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+/* button {
+    background: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+} */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+main {
+  min-height: calc(100vh - 43px);
+}
+
+img {
+  display: block;
+  max-height: 100%;
+}

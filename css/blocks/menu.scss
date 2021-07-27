@@ -1,24 +1,31 @@
 .menu {
-    flex: 1;
-    margin: 0 46px 0 38px;
-    & .menu__list {
-        display: flex;
-        justify-content: space-around;
+  flex: 1;
+  margin: 0 rem(46px) 0 rem(38px);
 
-        & .menu__item {
+  @include tablets {
+    display: none;
+  }
 
-            & .menu__link {
-                font-family: Alegreya Sans;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 18px;
-                line-height: 20px;
-                color: #292929;
+  & .menu__list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
+    & .menu__item {
+        margin-bottom: rem(5px);
+      & .menu__link {
+        font-family: Alegreya Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: rem(18px); // 18
+        line-height: rem(20px);
+        color: #292929;
+        white-space: nowrap;
+
+        &:hover {
+          text-decoration: underline;
         }
+      }
     }
+  }
 }
