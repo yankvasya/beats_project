@@ -242,20 +242,14 @@ img {
   border-radius: 12px;
 }
 .hamburger__all {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 666;
+  z-index: 667;
   background: #666666;
-  color: #FFFFFF;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 2.25rem;
 }
 .hamburger__close {
   position: absolute;
@@ -279,30 +273,35 @@ img {
           flex: 1;
 }
 .hamburger__list {
-  height: calc(100vh - 192px);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.hamburger__items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  height: 510px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.hamburger__items {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .hamburger__link {
   cursor: pointer;
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.25rem;
 }
 .hamburger__link:hover {
   text-decoration: underline;
