@@ -5,6 +5,7 @@
   align-items: center;
   position: relative;
 
+
   &::before {
     content: "";
     position: absolute;
@@ -34,12 +35,18 @@
     color: #292929;
   }
 
-  .feedback {
-    padding: rem(42px) ;
+  .feedback.feedback--active {
     display: flex;
+
+  }
+
+  .feedback {
+    padding: rem(42px);
+    display: none;
     background: #F8FAF9;
     overflow: hidden;
     position: relative;
+    min-height: 280px;
 
     @include tablets {
       flex-direction: column;
@@ -100,7 +107,7 @@
       font-size: rem(16px); // 16
       line-height: rem(19px);
       color: #666666;
-      
+
       @include tablets {
         justify-self: center;
         margin-right: 0;
@@ -127,6 +134,8 @@
       margin-top: rem(15px);
       display: flex;
       justify-content: center;
+
+    
 
       .person {
         user-select: none;

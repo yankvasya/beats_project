@@ -123,11 +123,64 @@
     <section class="options">
       <div class="container">
         <div class="options__control">
-          <a href="#" class="options__btn">
+          <a href="#" class="options__btn" id="leftbtn">
             <img src="./icons/left.svg" alt="left">
           </a>
         </div>
 
+        <div class="options__all activeslide">
+          <img src="./img/options__img.jpg" alt="headphone" class="options__img">
+          <div class="options__content">
+            <div class="options__head">
+              <div class="icon__dropdown">
+                <ul class="dropdown__list">
+                  <li class="dropdown__elements">
+                    <img src="./icons/drop/bluetooth.svg" alt="" class="dropdown__icon">
+                    <h5 class="dropdown__name">Bluetooth</h5>
+                    <div class="dropdown__value">4.0</div>
+                  </li>
+                  <li class="dropdown__elements">
+                    <img src="./icons/drop/road.svg" alt="" class="dropdown__icon">
+                    <h5 class="dropdown__name">Дальность</h5>
+                    <div class="dropdown__value">12 м</div>
+                  </li>
+                  <li class="dropdown__elements">
+                    <img src="./icons/drop/charger.svg" alt="" class="dropdown__icon">
+                    <h5 class="dropdown__name">Зарядка</h5>
+                    <div class="dropdown__value">3ч</div>
+                  </li>
+                  <li class="dropdown__elements">
+                    <img src="./icons/drop/kg.svg" alt="" class="dropdown__icon">
+                    <h5 class="dropdown__name">Вес</h5>
+                    <div class="dropdown__value">215гр</div>
+                  </li>
+                  <li class="dropdown__elements">
+                    <img src="./icons/drop/patent.svg" alt="" class="dropdown__icon">
+                    <h5 class="dropdown__name">Гарантия</h5>
+                    <div class="dropdown__value">1 год</div>
+                  </li>
+                </ul>
+              </div>
+              <a class="options__icon" href="#">
+                <img src="./icons/click.svg" alt="gear">
+              </a>
+            </div>
+            <h3 class="options__title">Beats Solo 3. Цвет "Атласное серебро"</h3>
+            <div class="options__info">
+              <p>Беспроводные наушники Beats Solo3 готовы к работе в любой момент. Включите их и поднесите к своему
+                iPhone
+                — они мгновенно подключатся к нему.</p>
+            </div>
+            <div class="options__details">
+              <div class="options__charging">Зарядка <br><span>2 часа</span></div>
+              <div class="options__weight">Вес <br><span>215 грамм</span></div>
+            </div>
+            <div class="options__buy-info">
+              <div class="options__price">14 990 Р</div>
+              <a href="#" class="options__buy-btn button">Заказать</a>
+            </div>
+          </div>
+        </div>
         <div class="options__all">
           <img src="./img/options__img.jpg" alt="headphone" class="options__img">
           <div class="options__content">
@@ -182,7 +235,7 @@
           </div>
         </div>
         <div class="options__control">
-          <a href="#" class="options__btn">
+          <a href="#" class="options__btn" id="rightbtn">
             <img src="./icons/right.svg" alt="right">
           </a>
         </div>
@@ -201,7 +254,7 @@
               <div class="member__drop">
                 <div class="member__special">Главный технолог</div>
                 <div class="member__optain">Отвечает за вкусовые качества и калорийность.</div>
-              </div>  
+              </div>
             </a>
           </li>
           <li class="member">
@@ -245,8 +298,8 @@
       <div class="container">
         <h2 class="feedbacks__title">Отзывы</h2>
         <div class="feedbacks__all">
-          <div class="feedback">
-            <img class="feedback__img" src="./img/feedback__img-1.png" alt="feedback img">
+          <div class="feedback active" data-feedback="one">
+            <img class="feedback__img" src="./img/feedback__img-1.jpg" alt="feedback img">
             <div class="feedback__info">
               <div class="feedback__title">Отличный звук</div>
               <div class="feedback__text">Я ем малыми порциями, но часто. Это повышает мою продуктивность
@@ -255,10 +308,31 @@
               <div class="feedback__author">Билли Айлиш</div>
             </div>
           </div>
+          <div class="feedback" data-feedback="two">
+            <img class="feedback__img" src="./img/feedback__img-2.jpg" alt="feedback img">
+            <div class="feedback__info">
+              <div class="feedback__title">Крутой дизайн</div>
+              <div class="feedback__text">После тренировок всегда хочется быстро закинуться чем-то белковым, потому что
+                до дома ещё нужно доехать. А кушать хочется. Протеиновые батончики всегда выручают в этом плане. Спасибо
+                производителю за этот качественный и экологичный продукт. </div>
+              <div class="feedback__author">Вадим Грачев</div>
+            </div>
+          </div>
+          <div class="feedback" data-feedback="three">
+            <img class="feedback__img" src="./img/feedback__img-3.jpg" alt="feedback img">
+            <div class="feedback__info">
+              <div class="feedback__title">На долго хватает заряда</div>
+              <div class="feedback__text">Батончики понравились. На мой взгляд слегка завышена цена по сравнению с
+                конкурентами, однако, как говорится – оно того стоит. Нравится носить с собой, нравится держать в руке.
+                Ну и конечно же, кушать. Идеально утоляют голод, хоть и не надолго. Через час уже ем ещё один. Но это
+                скорее плюс, чем минус.</div>
+              <div class="feedback__author">Мария Орлова</div>
+            </div>
+          </div>
           <div class="feedback__select">
-            <a href="#" class="person person--active"><img class="person__img" src="./img/person-1.png" alt="1"></a>
-            <a href="#" class="person"><img class="person__img" src="./img/person-2.png" alt="2"></a>
-            <a href="#" class="person"><img class="person__img" src="./img/person-3.png" alt="3"></a>
+            <a href="#" class="person person--active" data-pos="one"><img class="person__img" src="./img/person-1.png" alt="1"></a>
+            <a href="#" class="person" data-pos="two"><img class="person__img" src="./img/person-2.png" alt="2"></a>
+            <a href="#" class="person" data-pos="three"><img class="person__img" src="./img/person-3.png" alt="3"></a>
           </div>
         </div>
       </div>
@@ -438,6 +512,7 @@
   </nav>
 
   <script src="jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="main.js"></script>
 </body>
 

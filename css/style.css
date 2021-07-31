@@ -1016,6 +1016,7 @@ img {
   color: #292929;
 }
 .team .member {
+  min-height: 408px;
   width: 222px;
   margin-right: 1.25rem;
 }
@@ -1138,14 +1139,18 @@ img {
   text-align: center;
   color: #292929;
 }
-.feedbacks .feedback {
-  padding: 2.625rem;
+.feedbacks .feedback.feedback--active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+.feedbacks .feedback {
+  padding: 2.625rem;
+  display: none;
   background: #F8FAF9;
   overflow: hidden;
   position: relative;
+  min-height: 280px;
 }
 @media screen and (max-width: 768px) {
   .feedbacks .feedback {

@@ -38,6 +38,50 @@ $('.member__drop-link').on('click', e => { // Реализация аккорд�
   console.log($(elem));
 });
 
+$('#rightbtn').on('click', e => {
+  e.preventDefault();
+});
+
+$('#leftbtn').on('click', e => {
+  e.preventDefault();
+})
+
+// $('#rightbtn').slick({
+//   dots: true,
+//   infinite: false,
+//   speed: 300,
+//   slidesToShow: 4,
+//   slidesToScroll: 4,
+//   responsive: [
+//     {
+//       breakpoint: 1024,
+//       settings: {
+//         slidesToShow: 3,
+//         slidesToScroll: 3,
+//         infinite: true,
+//         dots: true
+//       }
+//     },
+//     {
+//       breakpoint: 600,
+//       settings: {
+//         slidesToShow: 2,
+//         slidesToScroll: 2
+//       }
+//     },
+//     {
+//       breakpoint: 480,
+//       settings: {
+//         slidesToShow: 1,
+//         slidesToScroll: 1
+//       }
+//     }
+//     // You can unslick at a given breakpoint now by adding:
+//     // settings: "unslick"
+//     // instead of a settings object
+//   ]
+// });
+
 
 $('.fixed-menu__link').on('click', e => {
   e.preventDefault();
@@ -53,7 +97,21 @@ $('.social__link').on('click', e => {
 });
 
 
+const findBlockByAlias = alias => {
+  return $('.feedback').filter((ndx, item) => {
+    return $(item).attr('data-feedback') === alias;
+  });
+};
+
 $('.person').on('click', e => {
   e.preventDefault();
 
+  const target = $(e.currentTarget);
+  const data = target.attr('data-pos');
+
+  const itemToShow = findBlockByAlias(data);
+  $('.person').removeClass('person--active');
+  $(target).addClass('person--active');
+
+  itemToShow.addClass('feedback--active').siblings().removeClass('feedback--active');
 });

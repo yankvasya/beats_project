@@ -11,11 +11,16 @@
   .container {
     display: flex;
     justify-content: center;
+    // overflow: hidden;
 
     @include tablets {
       width: 90%;
     }
   }
+
+  // .activeslide {
+  //   flex: 1;
+  // }
 
   &__all {
     padding: rem(95px) 0;
