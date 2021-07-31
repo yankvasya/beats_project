@@ -24,15 +24,15 @@ $('.member__drop-link').on('click', e => { // Реализация аккорд�
 
   if ($(child).hasClass('active')) {
     $('.active').slideUp();
-    $('.active').removeClass();
-    $(elem).css('transform', 'rotate(-180deg)');
-  } else {
-    $('.member__elem').css('transform', 'rotate(-180deg)');
-    $('.active').slideUp();
-    $('.active').removeClass();
+    $('.member__drop').removeClass('active');
     $(elem).css('transform', 'rotate(0deg)');
-    $(child).slideToggle();
+  } else {
+    $('.member__elem').css('transform', 'rotate(0deg)');
+    $('.active').slideUp();
+    $('.active').removeClass('active');
     $(child).addClass('active');
+    $(elem).css('transform', 'rotate(-180deg)');
+    $(child).slideToggle();
   }
 
   console.log($(elem));

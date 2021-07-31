@@ -73,7 +73,7 @@
       // position: absolute;
       right: 10%;
       top: 50%;
-      transform: rotate(-180deg);
+      transform: rotate(0deg);
     }
 
     &__special {
@@ -99,7 +99,14 @@
 
     &__drop {
       display: none;
+      // height: 0;
+      // overflow: hidden;
       flex-direction: column;
+    }
+
+    .activee {
+      display: block;
+      overflow: visible;
     }
   }
 }

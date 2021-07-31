@@ -1069,8 +1069,8 @@ img {
   border-style: solid;
   right: 10%;
   top: 50%;
-  -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 .team .member__special {
   margin-top: 0.6875rem;
@@ -1096,6 +1096,10 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+.team .member .activee {
+  display: block;
+  overflow: visible;
 }
 
 .feedbacks {
