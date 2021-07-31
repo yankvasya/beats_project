@@ -115,3 +115,18 @@ $('.person').on('click', e => {
 
   itemToShow.addClass('feedback--active').siblings().removeClass('feedback--active');
 });
+
+$('.slider').bxSlider({
+  // pager: 'false'
+  controls: 'false',
+  keyboardEnabled: 'true'
+});
+
+$
+
+// $('.bx-prev').attr('class', 'options__btn');
+// $('.bx-prev').html('<div class="options__control">< a href = "#" class= "options__btn" id = "leftbtn" ><img src="./icons/left.svg" alt="left"></></div > ')
+// $('.bx-prev').toggle('.bx-prev');
+
+
+// $('.bx-prev').remove();

@@ -715,10 +715,30 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow: hidden;
 }
 @media screen and (max-width: 768px) {
   .options .container {
     width: 90%;
+  }
+}
+.options .activeslide {
+  position: absolute;
+  padding: 5.9375rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 0 2.0625rem;
+}
+@media screen and (max-width: 768px) {
+  .options .activeslide {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 .options__all {
@@ -738,27 +758,6 @@ img {
         -ms-flex-align: center;
             align-items: center;
   }
-  .options__all:after {
-    cursor: pointer;
-    position: absolute;
-    top: 28%;
-    left: 2.5rem;
-    content: "";
-    width: 20px;
-    height: 38px;
-    background-image: url(../icons/left.svg);
-  }
-  .options__all:before {
-    cursor: pointer;
-    position: absolute;
-    z-index: 3;
-    content: "";
-    top: 28%;
-    right: 2.5rem;
-    width: 20px;
-    height: 38px;
-    background-image: url(../icons/right.svg);
-  }
 }
 @media screen and (max-width: 768px) and (max-width: 480px) {
   .options__all:before {
@@ -773,6 +772,10 @@ img {
   width: 28.25rem;
   height: 28.25rem;
   border-radius: 50%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 @media screen and (max-width: 768px) {
   .options__img {
