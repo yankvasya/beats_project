@@ -985,6 +985,27 @@ img {
   position: relative;
   width: 24.6875rem;
 }
+.options .bx-wrapper {
+  border: 0;
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.options .bx-prev {
+  background: url(../../icons/left.svg) center center/contain no-repeat;
+}
+.options .bx-next:hover {
+  background-position: unset;
+  opacity: 1;
+}
+.options .bx-prev:hover {
+  background-position: unset;
+}
+.options .bx-next {
+  background-position: unset;
+  opacity: 1 !important;
+  background: url(../../icons/right.svg) center center/contain no-repeat;
+}
 
 .team {
   background: #fff;
@@ -1030,7 +1051,7 @@ img {
   color: #292929;
 }
 .team .member {
-  min-height: 408px;
+  min-height: 427px;
   width: 222px;
   margin-right: 1.25rem;
 }
