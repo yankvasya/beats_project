@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BEATS</title>
   <!-- <link rel="stylesheet" href="./css/layout/fonts.css"> -->
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -305,7 +306,7 @@
       <div class="container">
         <h2 class="feedbacks__title">Отзывы</h2>
         <div class="feedbacks__all">
-          <div class="feedback active" data-feedback="one">
+          <div class="feedback feedback--active" data-feedback="one">
             <img class="feedback__img" src="./img/feedback__img-1.jpg" alt="feedback img">
             <div class="feedback__info">
               <div class="feedback__title">Отличный звук</div>
@@ -519,8 +520,19 @@
     </ul>
   </nav>
 
+  <div class="modal" id="modal">
+    <div class="modal__container">
+      <div class="modal__content">
+        Сообщение отправлено
+      </div>
+      <div class="modal__button-container">
+        <a href="#" class="btn btn--theme--green">Закрыть</a>
+      </div>
+    </div>
+  </div>
+
   <script src="jquery-3.6.0.min.js"></script>
-  <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
   <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
   <script src="main.js"></script>
 </body>
