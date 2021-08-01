@@ -1,3 +1,5 @@
+
+
 const body = document.body;
 const hamburger = document.querySelector('.hamburger');
 const hamburgerAll = document.querySelector('.hamburger__all');
