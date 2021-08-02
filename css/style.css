@@ -717,18 +717,12 @@ img {
           justify-content: center;
   overflow: hidden;
 }
-@media screen and (max-width: 768px) {
-  .options .container {
-    width: 90%;
-  }
-}
 .options .activeslide {
   position: absolute;
   padding: 5.9375rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 0 0 2.0625rem;
 }
 @media screen and (max-width: 768px) {
   .options .activeslide {
@@ -757,6 +751,7 @@ img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin: 0;
   }
 }
 @media screen and (max-width: 768px) and (max-width: 480px) {
@@ -1745,12 +1740,13 @@ img {
 }
 
 .modal__container {
-  height: 176px;
+  width: 19.3125rem;
+  height: 11rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background: #fff;
-  padding: 37px 50px;
+  padding: 2.3125rem 3.125rem;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1762,16 +1758,33 @@ img {
 }
 
 .modal__content {
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
   color: #000000;
 }
 
 .button--model {
-  margin-top: 18px;
+  margin-top: 1.125rem;
+}
+
+@media screen and (max-width: 768px) {
+  .bx-wrapper .bx-controls-direction a {
+    top: 28%;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bx-wrapper .bx-next {
+    right: -0.5625rem;
+  }
+}
+
+.bx-wrapper .bx-prev {
+  left: -0.5625rem;
 }
 
 /* Проверка */

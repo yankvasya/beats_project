@@ -118,6 +118,7 @@ form.addEventListener('submit', function (e) {
   let isValid = true; /* флаг, показывающий, прошла ли форма валидацию */
   const modal = $('#modal');
   const contModal = modal.find(".modal__content");
+  contModal.text("");
 
 
 

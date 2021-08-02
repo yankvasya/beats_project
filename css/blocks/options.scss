@@ -14,7 +14,7 @@
     overflow: hidden;
 
     @include tablets {
-      width: 90%;
+      // width: 90%;
     }
   }
 
@@ -23,7 +23,7 @@
     position: absolute;
     padding: rem(95px) 0;
     display: flex;
-    margin: 0 0 0 rem(33px);
+    // margin: 0 0 0 rem(33px);
 
     @include tablets {
       & {
@@ -66,6 +66,7 @@
       & {
         flex-direction: column;
         align-items: center;
+        margin: 0;
 
         // &:after {
         //   cursor: pointer;

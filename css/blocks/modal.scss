@@ -32,11 +32,11 @@
 }
 
 .modal__container {
-  // width: 309px;
-  height: 176px;
+  width: rem(309px);
+  height: rem(176px);
   display: flex;
   background: #fff;
-  padding: 37px 50px;
+  padding: rem(37px) rem(50px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,14 +44,32 @@
 }
 
 .modal__content {
-  margin-bottom: 15px;
+  margin-bottom: rem(15px);
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: rem(18px);
+  line-height: rem(24px);
   color: #000000;
-}
+  }
+
 
 .button--model {
-  margin-top: 18px;
+  margin-top: rem(18px);
+}
+
+.bx-wrapper .bx-controls-direction a {
+  @include tablets {
+    top: 28%;
+    margin-top: 0;
+  }
+}
+
+.bx-wrapper .bx-next {
+  @include tablets {
+    right: rem(-9px);
+  }
+}
+
+.bx-wrapper .bx-prev {
+  left: rem(-9px);
 }
