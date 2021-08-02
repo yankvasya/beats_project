@@ -1,5 +1,3 @@
-
-
 const body = document.body;
 const hamburger = document.querySelector('.hamburger');
 const hamburgerAll = document.querySelector('.hamburger__all');
@@ -82,7 +80,6 @@ $('.person').on('click', e => {
 });
 
 $('.slider').bxSlider({
-  // pager: 'false'
   controls: 'false',
   keyboardEnabled: 'true'
 });
