@@ -2,16 +2,15 @@ const body = document.body;
 const hamburger = document.querySelector('.hamburger');
 const hamburgerAll = document.querySelector('.hamburger__all');
 const hamburgerClose = document.querySelector('.hamburger__close');
-
 const fixedMenu = document.querySelector('.fixed-menu__link');
 
-hamburger.addEventListener('click', () => {
+hamburger.addEventListener('click', () => { // Выпадашка
   e.preventDefault();
   hamburgerAll.style.display = `flex`;
   body.style.overflowY = `hidden`;
 });
 
-hamburgerClose.addEventListener('click', e => {
+hamburgerClose.addEventListener('click', e => { // Закрытие выпадашки
   e.preventDefault();
   hamburgerAll.style.display = `none`;
   body.style.overflowY = `scroll`;
@@ -50,9 +49,9 @@ $('.fixed-menu__link').on('click', e => {
   e.preventDefault();
 });
 
-$('.button').on('click', e => {
-  e.preventDefault();
-});
+// $('.button').on('click', e => {
+//   e.preventDefault();
+// });
 
 $('.social__link').on('click', e => {
   e.preventDefault();
@@ -84,12 +83,61 @@ $('.slider').bxSlider({
   keyboardEnabled: 'true'
 });
 
-$('.form').submit(e => {
-  e.preventDefault();
-  console.log('123');
+// $('.form').submit(e => {
+//   e.preventDefault();
+//   const elements = $('.form').elements;
+//   console.log($('.form'));
 
-  $.fancybox.open({
-    src: "#modal",
-    type: "inline"
+//   $.fancybox.open({
+//     src: "#modal",
+//     type: "inline"
+//   })
+// });
+
+
+const form = document.querySelector('.form'); /* форма */
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  const fields = [form.elements.name, form.elements.phone, form.elements.street, form.elements.house, form.elements.frame, form.elements.room, form.elements.floor, form.elements.comment]; /* массив полей, обязательных для заполнения */
+  const data = { /* объект данных для отправки в запросе */
+    name: form.elements.name.value,
+    phone: form.elements.phone.value,
+    street: form.elements.street.value,
+    house: form.elements.house.value,
+    frame: form.elements.frame.value,
+    room: form.elements.room.value,
+    floor: form.elements.floor.value,
+    comment: form.elements.comment.value,
+    to: 'test@test.com'
+  };
+  const xhr = new XMLHttpRequest();
+
+  let isValid = true; /* флаг, показывающий, прошла ли форма валидацию */
+
+  fields.forEach(field => {
+    if (!field.value.length) { /* проверяем только на заполненность, можно добавить различные доп условия */
+      isValid = false;
+      field.classList.add('error')
+    } else {
+      field.classList.remove('error')
+    }
   })
+
+  if (isValid) {
+    console.log('Отправляем запрос');
+    xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+    xhr.setRequestHeader('content-type', 'application/json');
+    xhr.send(JSON.stringify(data));
+    console.log(data.status);
+    $('#modal').css('display', 'flex');
+  } else {
+    console.log('Не отправляем запрос')
+  }
 });
+
+$('.button--model').on('click', e => {
+  e.preventDefault();
+
+  $('#modal').hide();
+})
