@@ -316,22 +316,27 @@
   }
 
   .bx-prev {
-    background: url(../../icons/left.svg) center center / contain no-repeat;
+    background: url(../icons/left.svg) center center / contain no-repeat;
   }
 
   .bx-next:hover {
-    background-position:unset;
+    background-position: unset;
     opacity: 1;
   }
 
   .bx-prev:hover {
-    background-position:unset;
+    background-position: unset;
   }
 
   .bx-next {
-    background-position:unset;
+    background-position: unset;
     opacity: 1 !important;
 
-    background: url(../../icons/right.svg) center center / contain no-repeat;
+    background: url(../icons/right.svg) center center / contain no-repeat;
   }
+}
+
+.bx-wrapper .bx-next:hover,
+.bx-wrapper .bx-next:focus {
+  background-position: unset;
 }

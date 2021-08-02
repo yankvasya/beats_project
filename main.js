@@ -172,3 +172,7 @@ $('.button--model').on('click', e => {
 
   $('#modal').hide();
 })
+
+$(window).on('load', e => {
+  $('.bx-wrapper').addClass('container');
+})

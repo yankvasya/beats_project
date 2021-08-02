@@ -992,7 +992,7 @@ img {
           box-shadow: none;
 }
 .options .bx-prev {
-  background: url(../../icons/left.svg) center center/contain no-repeat;
+  background: url(../icons/left.svg) center center/contain no-repeat;
 }
 .options .bx-next:hover {
   background-position: unset;
@@ -1004,7 +1004,12 @@ img {
 .options .bx-next {
   background-position: unset;
   opacity: 1 !important;
-  background: url(../../icons/right.svg) center center/contain no-repeat;
+  background: url(../icons/right.svg) center center/contain no-repeat;
+}
+
+.bx-wrapper .bx-next:hover,
+.bx-wrapper .bx-next:focus {
+  background-position: unset;
 }
 
 .team {
