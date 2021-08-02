@@ -1494,6 +1494,11 @@ img {
   }
 }
 
+.error {
+  border: 0.1875rem solid red;
+  border-radius: 1%;
+}
+
 .radio {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1727,13 +1732,14 @@ img {
           flex: 1;
   z-index: 999;
   display: none;
+  -webkit-transition: display 1s;
+  transition: display 1s;
 }
 .modal.error-modal .modal__content {
   color: red;
 }
 
 .modal__container {
-  width: 309px;
   height: 176px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1752,7 +1758,11 @@ img {
 
 .modal__content {
   margin-bottom: 15px;
-  color: #000;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
 }
 
 .button--model {

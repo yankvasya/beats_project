@@ -14,6 +14,8 @@
   z-index: 999;
   display: none;
 
+  transition: display 1s;
+
   &.error-modal {
     .modal__content {
       color: red;
@@ -30,7 +32,7 @@
 }
 
 .modal__container {
-  width: 309px;
+  // width: 309px;
   height: 176px;
   display: flex;
   background: #fff;
@@ -43,7 +45,11 @@
 
 .modal__content {
   margin-bottom: 15px;
-  color: #000;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
 }
 
 .button--model {

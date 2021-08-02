@@ -113,24 +113,55 @@ form.addEventListener('submit', function (e) {
   };
   const xhr = new XMLHttpRequest();
 
+  console.log(data);
+
   let isValid = true; /* флаг, показывающий, прошла ли форма валидацию */
+  const modal = $('#modal');
+  const contModal = modal.find(".modal__content");
+
+
 
   fields.forEach(field => {
+    console.log();
     if (!field.value.length) { /* проверяем только на заполненность, можно добавить различные доп условия */
       isValid = false;
       field.classList.add('error')
     } else {
       field.classList.remove('error')
     }
+    if (field.trim === " ") {
+      console.log('123');
+    }
   })
 
   if (isValid) {
+    $('#modal').removeClass('error-modal');
     console.log('Отправляем запрос');
     xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
     xhr.setRequestHeader('content-type', 'application/json');
-    xhr.send(JSON.stringify(data));
-    console.log(data.status);
+
+    $.ajax({
+      url: "https://webdev-api.loftschool.com/sendmail",
+      method: "post",
+      data: {
+        name: form.elements.name.value,
+        phone: form.elements.phone.value,
+        comment: form.elements.comment.value,
+        to: 'test@test.com'
+      },
+      success: date => {
+        // console.log(date);
+        contModal.text(date.message);
+      },
+      error: date => {
+        // console.log(date);
+        $('#modal').addClass('error-modal');
+        contModal.text(date.responseJSON.message);
+
+      }
+    });
     $('#modal').css('display', 'flex');
+
   } else {
     console.log('Не отправляем запрос')
   }
