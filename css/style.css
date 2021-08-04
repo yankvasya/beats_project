@@ -1740,8 +1740,8 @@ img {
 }
 
 .modal__container {
-  width: 19.3125rem;
-  height: 11rem;
+  min-width: 19.3125rem;
+  min-height: 11rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

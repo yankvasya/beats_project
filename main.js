@@ -153,15 +153,15 @@ form.addEventListener('submit', function (e) {
       success: date => {
         // console.log(date);
         contModal.text(date.message);
+        $('#modal').css('display', 'flex');
       },
       error: date => {
         // console.log(date);
         $('#modal').addClass('error-modal');
         contModal.text(date.responseJSON.message);
-
+        $('#modal').css('display', 'flex');
       }
     });
-    $('#modal').css('display', 'flex');
 
   } else {
     console.log('Не отправляем запрос')

@@ -32,8 +32,8 @@
 }
 
 .modal__container {
-  width: rem(309px);
-  height: rem(176px);
+  min-width: rem(309px);
+  min-height: rem(176px);
   display: flex;
   background: #fff;
   padding: rem(37px) rem(50px);
