@@ -155,8 +155,27 @@ $('.button--model').on('click', e => {
   e.preventDefault();
 
   $('#modal').hide();
-})
+});
 
 $(window).on('load', e => {
   $('.bx-wrapper').addClass('container');
-})
+});
+
+$('.color__block').on('click', e => {
+  const parent = e.currentTarget;
+  const children = $(parent).find('.color__info');
+
+  if (!$(children).hasClass('visible')) {
+    if ($('.color__info').hasClass('visible')) {
+      $('.color__info').removeClass('visible');
+    }
+    $(children).toggleClass('visible');
+  } else {
+    console.log('123');
+    $('.color__info').removeClass('visible');
+  }
+    
+
+
+  // $(children).slideToggle().toggleClass('visible');
+});

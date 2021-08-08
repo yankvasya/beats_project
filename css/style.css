@@ -1166,6 +1166,104 @@ img {
   overflow: visible;
 }
 
+.colors {
+  background: url("../../img/colors__bg.jpg") center center/cover no-repeat;
+  height: 100vh;
+  min-height: 40.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+.colors .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  padding: 5.875rem 0 3.125rem;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+.colors .container .colors__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 3.25rem;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.colors__content {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.colors .color__block {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+.colors .color__block--red {
+  background: #E01F3C;
+}
+.colors .color__block--black {
+  background: #151515;
+}
+.colors .color__block--grey {
+  background: #999;
+}
+.colors .color__title {
+  position: relative;
+  width: 6.375rem;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+.colors .color {
+  position: absolute;
+  top: -20px;
+  left: -300%;
+  white-space: nowrap;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.25rem;
+  line-height: 2.6875rem;
+  color: #FFF;
+}
+.colors .color__info {
+  width: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.colors .color__info .color__text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16.0138px;
+  line-height: 1.5rem;
+  color: #FFFFFF;
+}
+.colors .color__info.visible {
+  width: 32.75rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
 .feedbacks {
   height: 100vh;
   min-height: 40.625rem;
