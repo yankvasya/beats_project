@@ -4,8 +4,9 @@ const hamburgerAll = document.querySelector('.hamburger__all');
 const hamburgerClose = document.querySelector('.hamburger__close');
 const fixedMenu = document.querySelector('.fixed-menu__link');
 
-hamburger.addEventListener('click', () => { // Выпадашка
+hamburger.addEventListener('click', e => { // Выпадашка
   e.preventDefault();
+  console.log('123');
   hamburgerAll.style.display = `flex`;
   body.style.overflowY = `hidden`;
 });
@@ -49,10 +50,6 @@ $('.fixed-menu__link').on('click', e => {
   e.preventDefault();
 });
 
-// $('.button').on('click', e => {
-//   e.preventDefault();
-// });
-
 $('.social__link').on('click', e => {
   e.preventDefault();
 
@@ -82,18 +79,6 @@ $('.slider').bxSlider({
   controls: 'false',
   keyboardEnabled: 'true'
 });
-
-// $('.form').submit(e => {
-//   e.preventDefault();
-//   const elements = $('.form').elements;
-//   console.log($('.form'));
-
-//   $.fancybox.open({
-//     src: "#modal",
-//     type: "inline"
-//   })
-// });
-
 
 const form = document.querySelector('.form'); /* форма */
 
@@ -151,12 +136,10 @@ form.addEventListener('submit', function (e) {
         to: 'test@test.com'
       },
       success: date => {
-        // console.log(date);
         contModal.text(date.message);
         $('#modal').css('display', 'flex');
       },
       error: date => {
-        // console.log(date);
         $('#modal').addClass('error-modal');
         contModal.text(date.responseJSON.message);
         $('#modal').css('display', 'flex');

@@ -10,9 +10,5 @@
     bottom: rem(-18px);
     background: #C4C4C4;
     transform: rotate(45deg);
-
-    @include tablets {
-      // display: none;
-    }
   }
 }
