@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "jquery-touchswipe": "^1.6.19"
+    "jquery-touchswipe": "^1.6.19",
+    "mobile-detect": "^1.4.5"
   }
 }
