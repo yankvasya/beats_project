@@ -92,9 +92,18 @@
   &__btns {
     margin-top: rem(48px);
 
+    input {
+      cursor: pointer;
+    }
+
     @include tablets {
       display: flex;
       justify-content: center;
     }
   }
+}
+
+.error {
+  border: rem(3px) solid red;
+  border-radius: 1%;
 }

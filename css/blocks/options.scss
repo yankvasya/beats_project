@@ -11,13 +11,53 @@
   .container {
     display: flex;
     justify-content: center;
+    overflow: hidden;
 
     @include tablets {
-      width: 90%;
+      // width: 90%;
+    }
+  }
+
+
+  .activeslide {
+    position: absolute;
+    padding: rem(95px) 0;
+    display: flex;
+    // margin: 0 0 0 rem(33px);
+
+    @include tablets {
+      & {
+        flex-direction: column;
+        align-items: center;
+
+        // &:after {
+        //   cursor: pointer;
+        //   position: absolute;
+        //   top: 28%;
+        //   left: rem(40px);
+        //   content: "";
+        //   width: 20px;
+        //   height: 38px;
+        //   background-image: url(../icons/left.svg);
+        // }
+
+        // &:before {
+        //   cursor: pointer;
+        //   position: absolute;
+        //   z-index: 3;
+        //   content: "";
+        //   top: 28%;
+        //   right: rem(40px);
+        //   width: 20px;
+        //   height: 38px;
+        //   background-image: url(../icons/right.svg);
+        // }
+      }
     }
   }
 
   &__all {
+    // display: none;
     padding: rem(95px) 0;
     display: flex;
     margin: 0 0 0 rem(33px);
@@ -26,29 +66,30 @@
       & {
         flex-direction: column;
         align-items: center;
+        margin: 0;
 
-        &:after {
-          cursor: pointer;
-          position: absolute;
-          top: 28%;
-          left: rem(40px);
-          content: "";
-          width: 20px;
-          height: 38px;
-          background-image: url(../icons/left.svg);
-        }
+        // &:after {
+        //   cursor: pointer;
+        //   position: absolute;
+        //   top: 28%;
+        //   left: rem(40px);
+        //   content: "";
+        //   width: 20px;
+        //   height: 38px;
+        //   background-image: url(../icons/left.svg);
+        // }
 
-        &:before {
-          cursor: pointer;
-          position: absolute;
-          z-index: 3;
-          content: "";
-          top: 28%;
-          right: rem(40px);
-          width: 20px;
-          height: 38px;
-          background-image: url(../icons/right.svg);
-        }
+        // &:before {
+        //   cursor: pointer;
+        //   position: absolute;
+        //   z-index: 3;
+        //   content: "";
+        //   top: 28%;
+        //   right: rem(40px);
+        //   width: 20px;
+        //   height: 38px;
+        //   background-image: url(../icons/right.svg);
+        // }
       }
 
       @include phones {
@@ -69,6 +110,7 @@
     width: rem(452px);
     height: rem(452px);
     border-radius: 50%;
+    user-select: none;
 
     @include tablets {
       margin-right: 0;
@@ -267,4 +309,35 @@
     position: relative;
     width: rem(395px);
   }
+
+  .bx-wrapper {
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .bx-prev {
+    background: url(../icons/left.svg) center center / contain no-repeat;
+  }
+
+  .bx-next:hover {
+    background-position: unset;
+    opacity: 1;
+  }
+
+  .bx-prev:hover {
+    background-position: unset;
+  }
+
+  .bx-next {
+    background-position: unset;
+    opacity: 1 !important;
+
+    background: url(../icons/right.svg) center center / contain no-repeat;
+  }
+}
+
+.bx-wrapper .bx-next:hover,
+.bx-wrapper .bx-next:focus {
+  background-position: unset;
 }

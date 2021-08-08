@@ -1,0 +1,75 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #313131d7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  z-index: 999;
+  display: none;
+
+  transition: display 1s;
+
+  &.error-modal {
+    .modal__content {
+      color: red;
+    }
+  }
+
+  // &.fancybox-content {
+  //   // padding: 0 !important;
+  // }
+
+  // &.fancybox-button {
+  //   // display: none;
+  // }
+}
+
+.modal__container {
+  min-width: rem(309px);
+  min-height: rem(176px);
+  display: flex;
+  background: #fff;
+  padding: rem(37px) rem(50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // margin: auto;
+}
+
+.modal__content {
+  margin-bottom: rem(15px);
+  font-style: normal;
+  font-weight: normal;
+  font-size: rem(18px);
+  line-height: rem(24px);
+  color: #000000;
+  }
+
+
+.button--model {
+  margin-top: rem(18px);
+}
+
+.bx-wrapper .bx-controls-direction a {
+  @include tablets {
+    top: 28%;
+    margin-top: 0;
+  }
+}
+
+.bx-wrapper .bx-next {
+  @include tablets {
+    right: rem(-9px);
+  }
+}
+
+.bx-wrapper .bx-prev {
+  left: rem(-9px);
+}

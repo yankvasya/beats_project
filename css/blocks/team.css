@@ -1,0 +1,15 @@
+.team {
+  background: #F8FAF9;
+  height: 100vh;
+  min-height: rem(650px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 0;
+}
