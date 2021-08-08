@@ -37,8 +37,17 @@ body {
 .wrapper {
   position: relative;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   overflow: hidden;
+}
+
+.maincontent {
+  height: 100%;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  will-change: transform;
 }
 
 .container {
@@ -1270,7 +1279,7 @@ img {
 }
 @media screen and (max-width: 768px) {
   .colors .color__info.visible {
-    width: 61vw;
+    width: 59vw;
     -webkit-transition: all 1s;
     transition: all 1s;
   }
@@ -1710,6 +1719,9 @@ img {
 .fixed-menu__item--active .fixed-menu__link:before {
   background: #E01F3D;
   opacity: 1;
+}
+.fixed-menu__item:hover .fixed-menu__link {
+  border-color: #E01F3D;
 }
 
 .map__img {

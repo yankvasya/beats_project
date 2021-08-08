@@ -40,4 +40,10 @@
       }
     }
   }
+
+  &:hover {
+    .fixed-menu__link {
+      border-color: #E01F3D;
+    }
+  }
 }

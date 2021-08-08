@@ -174,8 +174,103 @@ $('.color__block').on('click', e => {
     console.log('123');
     $('.color__info').removeClass('visible');
   }
-    
-
-
-  // $(children).slideToggle().toggleClass('visible');
 });
+
+// OnePageScroll
+
+const sections = $('.sections');
+const display = $('.maincontent');
+
+let inScroll = false;
+
+sections.first().addClass("active-section");
+
+const performTransition = sectionEq => {
+  if (inScroll === false) {
+    inScroll = true;
+    const position = sectionEq * -100;
+
+    const currentSection = sections.eq(sectionEq);
+    const menuTheme = currentSection.attr("data-sidemenu-theme");
+    const sideMenu = $(".fixed-menu");
+
+    if (menuTheme === 'white') {
+      sideMenu.addClass('fixed-menu--shadowed');
+    } else {
+      sideMenu.removeClass('fixed-menu--shadowed');
+    }
+
+
+    display.css({
+      transform: `translateY(${position}%)`,
+    });
+
+    sections.eq(sectionEq).addClass('active-section').siblings().removeClass('active-section');
+
+    setTimeout(() => {
+      inScroll = false;
+
+      sideMenu
+        .find(".fixed-menu__item")
+        .eq(sectionEq)
+        .addClass("fixed-menu__item--active")
+        .sublings()
+        .removeClass("fixed-menu__item--active");
+    }, 1300);
+  }
+};
+
+const scrollViewport = direction => {
+  const activeSection = sections.filter(".active-section");
+  const nextSection = activeSection.next();
+  // console.log(nextSection);
+  const prevSection = activeSection.prev();
+
+  if (direction === 'next' && nextSection.length) {
+    performTransition(nextSection.index());
+  }
+  if (direction === 'prev' && prevSection.length) {
+    performTransition(prevSection.index());
+  }
+}
+
+$(window).on('wheel', e => {
+  const deltaY = e.originalEvent.deltaY;
+
+  if (deltaY > 0) {
+    scrollViewport("next");
+  }
+
+  if (deltaY < 0) {
+    scrollViewport("prev");
+  }
+});
+
+$(window).on('keydown', e => {
+
+  const tagName = e.target.tagName.toLowerCase();
+
+  if (tagName !== 'input' && tagName !== 'textarea') {
+    console.log('да');
+    switch (e.keyCode) {
+      case 38: // prev
+        scrollViewport('prev');
+        break;
+      case 40: //next
+        scrollViewport('next');
+
+        break;
+    }
+  }
+});
+
+
+$('[data-scroll-to]').click(e => {
+  e.preventDefault();
+
+  const $this = $(e.currentTarget);
+  const target = $this.attr('data-scroll-to');
+  const reqSection = $(`[data-section-id=${target}]`);
+
+  performTransition(reqSection.index())
+})
