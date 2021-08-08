@@ -30,6 +30,7 @@
     right: 0;
     top: 0;
     bottom: 0;
+    left: 0;
     // flex: 1;
   }
 
@@ -72,6 +73,7 @@
   }
 
   .color__info {
+    height: 100%;
     width: 0;
     overflow: hidden;
     transition: all .5s;
@@ -82,12 +84,20 @@
       font-size: 16.0138px;
       line-height: rem(24px);
       color: #FFFFFF;
+      width: 100%;
+      padding: rem(31px) rem(53px) 0 rem(38px);
     }
   }
 
   .color__info.visible {
+    background: #333537E5;
     width: rem(524px);
-    // overflow: hidden;
-    transition: all .5s;
+    transition: all 1s;
+
+    @include tablets {
+      // width: 53vw;
+      width: 61vw;
+      transition: all 1s;
+    }
   }
 }

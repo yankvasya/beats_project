@@ -1205,6 +1205,7 @@ img {
   right: 0;
   top: 0;
   bottom: 0;
+  left: 0;
 }
 .colors .color__block {
   cursor: pointer;
@@ -1246,6 +1247,7 @@ img {
   color: #FFF;
 }
 .colors .color__info {
+  height: 100%;
   width: 0;
   overflow: hidden;
   -webkit-transition: all 0.5s;
@@ -1257,11 +1259,21 @@ img {
   font-size: 16.0138px;
   line-height: 1.5rem;
   color: #FFFFFF;
+  width: 100%;
+  padding: 1.9375rem 3.3125rem 0 2.375rem;
 }
 .colors .color__info.visible {
+  background: #333537E5;
   width: 32.75rem;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+@media screen and (max-width: 768px) {
+  .colors .color__info.visible {
+    width: 61vw;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+  }
 }
 
 .feedbacks {
