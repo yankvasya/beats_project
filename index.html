@@ -15,7 +15,7 @@
 <body>
   <div class="wrapper">
     <div class="maincontent">
-      <div class="hero sections">
+      <div class="hero sections" data-section-id="welcome">
         <header class="header">
           <div class="container">
             <a href="#" class="logo">
@@ -542,7 +542,10 @@
 
   <nav class="fixed-menu">
     <ul class="fixed-menu__list">
-      <li data-scroll-to="us"  class="fixed-menu__item fixed-menu__item--active"> 
+      <li data-scroll-to="welcome"  class="fixed-menu__item fixed-menu__item--active"> 
+        <a href="" class="fixed-menu__link"></a>
+      </li>
+      <li data-scroll-to="us"  class="fixed-menu__item"> 
         <a href="" class="fixed-menu__link"></a>
       </li>
       <li data-scroll-to="headphones"  class="fixed-menu__item">  
@@ -583,7 +586,8 @@
 
   <script src="jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script> -->
+  <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>
   <script src="main.js"></script>
   <!-- <script src="form.js"></script> -->
 </body>

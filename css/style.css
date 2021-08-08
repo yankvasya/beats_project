@@ -268,7 +268,7 @@ img {
   cursor: pointer;
 }
 .hamburger__content {
-  height: 100vh;
+  height: 100%;
   min-height: 40.625rem;
   padding: 20% 0;
   text-align: center;
@@ -500,7 +500,7 @@ img {
 }
 
 .why {
-  height: 100vh;
+  height: 100%;
   min-height: 40.625rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -705,7 +705,7 @@ img {
 .options {
   position: relative;
   background: #F8FAF9;
-  height: 100vh;
+  height: 100%;
   min-height: 40.625rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1019,7 +1019,7 @@ img {
 
 .team {
   background: #fff;
-  height: 100vh;
+  height: 100%;
   min-height: 40.625rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1177,7 +1177,7 @@ img {
 
 .colors {
   background: url("../../img/colors__bg.jpg") center center/cover no-repeat;
-  height: 100vh;
+  height: 100%;
   min-height: 40.625rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1286,7 +1286,7 @@ img {
 }
 
 .feedbacks {
-  height: 100vh;
+  height: 100%;
   min-height: 40.625rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1465,7 +1465,7 @@ img {
 }
 
 .order {
-  height: 100vh;
+  height: 100%;
   min-height: 40.75rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1722,6 +1722,10 @@ img {
 }
 .fixed-menu__item:hover .fixed-menu__link {
   border-color: #E01F3D;
+}
+
+.fixed-menu--shadowed {
+  background: black;
 }
 
 .map__img {
