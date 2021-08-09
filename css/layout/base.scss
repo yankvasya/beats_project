@@ -6,6 +6,7 @@
 
 html {
   font-size: $fontSize;
+  scroll-behavior: smooth;
 
   @include tablets {
     font-size: $fontSize - 1px;

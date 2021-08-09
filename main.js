@@ -76,8 +76,11 @@ $('.person').on('click', e => {
 });
 
 $('.slider').bxSlider({
-  controls: 'false',
-  keyboardEnabled: 'true'
+  pager: false,
+  controls: true,
+  keyboardEnabled: false,
+  // oneToOneTouch: false
+  touchEnabled: false
 });
 
 const form = document.querySelector('.form'); /* форма */
