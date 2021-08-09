@@ -1465,6 +1465,20 @@ img {
   border-radius: 6.4375rem;
 }
 
+.how {
+  height: 100%;
+}
+.how__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 3.25rem;
+  text-align: center;
+  text-transform: uppercase;
+  /* black */
+  color: #292929;
+}
+
 .order {
   height: 100%;
   min-height: 40.75rem;

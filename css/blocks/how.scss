@@ -1,0 +1,16 @@
+.how {
+  height: 100%;
+
+  &__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: rem(48px);
+    line-height: rem(52px);
+    text-align: center;
+    text-transform: uppercase;
+
+    /* black */
+
+    color: #292929;
+  }
+}
