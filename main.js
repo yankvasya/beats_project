@@ -450,25 +450,25 @@ let myMap;
 
 const init = () => {
   myMap = new ymaps.Map("map", {
-    center: [53.188653, 50.104845],
-    zoom: 13,
+    center: [55.751448, 37.597449],
+    zoom: 14,
     controls: []
   });
 
 
   const coords = [
-    [53.193787, 50.095994],
-    [53.195236, 50.102853],
-    [53.197366, 50.097198],
-    [53.183973, 50.102324],
+    [55.758688, 37.583207],
+    [55.749687, 37.605286],
+    [55.757453, 37.617831],
+    [55.742863, 37.581686],
   ];
 
   const myCollection = new ymaps.GeoObjectCollection({}, {
     draggable: false,
     iconLayout: 'default#image',
-    iconImageHref: "./icons/map/pinmap.svg",
-    iconImageSize: [42, 42],
-    iconImageOffset: [-21, -21],
+    iconImageHref: "./icons/map/marker.svg",
+    iconImageSize: [73, 58],
+    iconImageOffset: [-36.5, -29],
   });
 
   coords.forEach(coord => {
