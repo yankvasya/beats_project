@@ -443,3 +443,39 @@ function onYouTubeIframeAPIReady() { // Добавление видео
 }
 
 eventsInit();
+
+// Карта
+
+let myMap;
+
+const init = () => {
+  myMap = new ymaps.Map("map", {
+    center: [53.188653, 50.104845],
+    zoom: 13,
+    controls: []
+  });
+
+
+  const coords = [
+    [53.193787, 50.095994],
+    [53.195236, 50.102853],
+    [53.197366, 50.097198],
+    [53.183973, 50.102324],
+  ];
+
+  const myCollection = new ymaps.GeoObjectCollection({}, {
+    draggable: false,
+    iconLayout: 'default#image',
+    iconImageHref: "./icons/map/pinmap.svg",
+    iconImageSize: [42, 42],
+    iconImageOffset: [-21, -21],
+  });
+
+  coords.forEach(coord => {
+    myCollection.add(new ymaps.Placemark(coord));
+  });
+
+  myMap.behaviors.disable('scrollZoom');
+  myMap.geoObjects.add(myCollection);
+}
+ymaps.ready(init);
