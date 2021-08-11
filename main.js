@@ -167,38 +167,50 @@ $(window).on('load', e => {
 // Горизонтальный аккордеон
 
 const mesureWidth = item => {
+  let reqItemWidth = 0;
   const screenWidth = $(window).width();
   const container = item.closest(".color__block");
   const titlesBlock = container.find(".color__title");
   const titlesWidth = titlesBlock.width() * 3;
 
+  // console.log(container.find('.color__info'));
+
+  const textContainer = container.find('.color__text');
+  const paddingLeft = parseInt(textContainer.css('padding-left'));
+  const paddingRight = parseInt(textContainer.css('padding-right'));
+
+  console.log(`padding: left(${paddingLeft}px) and right(${paddingRight}px)`);
+
   const isMobile = window.matchMedia('(max-width: 786px)').matches;
   // console.log(titlesWidth);
 
   if (isMobile) {
-    return screenWidth - titlesWidth;
+    reqItemWidth = screenWidth - titlesWidth;
   } else {
-    return 500;
+    reqItemWidth = 500;
   }
 
-
-
-}
+  return {
+    container: reqItemWidth,
+    textContainer: reqItemWidth - paddingLeft - paddingRight
+  }
+};
 
 $('.color__block').on('click', e => {
   const parent = e.currentTarget;
   const target = e.target;
   const children = $(parent).find('.color__info');
   const reqWidth = mesureWidth($(target));
-
-  if ($('.color__info').hasClass('visible')) {
-    $('.color__info').removeClass('visible').width(0);
-    console.log('Лишные блоки закрыты');
-  }
+  const textBlock = children.find('.color__text');
 
   if (!$(children).hasClass('visible')) {
-    $(children).addClass('visible').width(mesureWidth($(target)));
+    $('.color__info').removeClass('visible').width(0);
+    console.log('Лишные блоки закрыты');
+    $(children).addClass('visible').width(reqWidth.container);
+    $(textBlock).width(reqWidth.textContainer)
   } else {
+    $('.color__info').removeClass('visible').width(0);
+    console.log('Лишные блоки закрыты');
     $(children).removeClass('visible').width(0);
   }
 });
