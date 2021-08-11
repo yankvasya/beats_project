@@ -191,10 +191,10 @@ $('.color__block').on('click', e => {
   const children = $(parent).find('.color__info');
   const reqWidth = mesureWidth($(target));
 
-  // if ($('.color__info').hasClass('visible')) {
-  //   $('.color__info').removeClass('visible');
-  //   console.log('Не имеет?');
-  // }
+  if ($('.color__info').hasClass('visible')) {
+    $('.color__info').removeClass('visible').width(0);
+    console.log('Лишные блоки закрыты');
+  }
 
   if (!$(children).hasClass('visible')) {
     $(children).addClass('visible').width(mesureWidth($(target)));
