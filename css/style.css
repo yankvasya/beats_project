@@ -1230,31 +1230,39 @@ img {
           justify-content: center;
   height: 100%;
 }
-.colors .color__block--red {
+.colors .color__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 100%;
+  padding-bottom: 3.375rem;
+  width: 6.375rem;
+}
+.colors .color__title--red {
   background: #E01F3C;
 }
-.colors .color__block--black {
+.colors .color__title--black {
   background: #151515;
 }
-.colors .color__block--grey {
+.colors .color__title--grey {
   background: #999;
 }
-.colors .color__title {
-  position: relative;
-  width: 6.375rem;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-}
 .colors .color {
-  position: absolute;
-  top: -20px;
-  left: -300%;
   white-space: nowrap;
   font-style: normal;
   font-weight: bold;
   font-size: 2.25rem;
   line-height: 2.6875rem;
   color: #FFF;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 .colors .color__info {
   height: 100%;
