@@ -17,25 +17,20 @@ hamburgerClose.addEventListener('click', e => { // Закрытие выпада
   body.style.overflowY = `scroll`;
 });
 
-$('.member__drop-link').on('click', e => { // Реализация аккордеона
+$('.member__drop-link').on('click', e => { // Реализация вертикального аккордеона
   e.preventDefault();
   let child = $(e.currentTarget).children().eq(2);
   let elem = $(child).prev();
 
   if ($(child).hasClass('active')) {
-    $('.active').slideUp();
-    $('.member__drop').removeClass('active');
     $(elem).css('transform', 'rotate(0deg)');
+    $('.member__drop').removeClass('active');
   } else {
-    $('.member__elem').css('transform', 'rotate(0deg)');
-    $('.active').slideUp();
+    $(elem).css('transform', 'rotate(-180deg)');
     $('.active').removeClass('active');
     $(child).addClass('active');
-    $(elem).css('transform', 'rotate(-180deg)');
-    $(child).slideToggle();
   }
 
-  console.log($(elem));
 });
 
 $('#rightbtn').on('click', e => {

@@ -82,12 +82,11 @@
       display: inline-flex;
       width: 0;
       height: 0;
-      border-width: 0 5px 8px 5px;
-      border-color: transparent transparent #E01F3D transparent;
+      border-width: 8px 5px 0 5px;
+      border-color: #E01F3D transparent transparent transparent;
       border-style: solid;
       right: 10%;
       top: 50%;
-      transform: rotate(0deg);
     }
 
     &__special {
@@ -120,13 +119,15 @@
 
 
     &__drop {
-      display: none;
+      height: 0;
       flex-direction: column;
+      transition: all 1s;
+      overflow: hidden;
     }
 
-    .activee {
-      display: block;
-      overflow: visible;
+    &__drop.active {
+      height: rem(90px);
+      transition: all 1s;
     }
   }
 }

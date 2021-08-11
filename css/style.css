@@ -1130,13 +1130,11 @@ img {
   display: inline-flex;
   width: 0;
   height: 0;
-  border-width: 0 5px 8px 5px;
-  border-color: transparent transparent #E01F3D transparent;
+  border-width: 8px 5px 0 5px;
+  border-color: #E01F3D transparent transparent transparent;
   border-style: solid;
   right: 10%;
   top: 50%;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
 }
 .team .member__special {
   margin-top: 0.6875rem;
@@ -1166,15 +1164,19 @@ img {
   color: #666666;
 }
 .team .member__drop {
-  display: none;
+  height: 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  overflow: hidden;
 }
-.team .member .activee {
-  display: block;
-  overflow: visible;
+.team .member__drop.active {
+  height: 5.625rem;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .colors {
