@@ -93,13 +93,17 @@
 
 .player.active {
   .player__splash {
-    // display: none;
     background: transparent;
     height: 0;
 
     &:before {
       display: none;
     }
+  }
+
+  #player {
+    display: block;
+
   }
 
   .player__controls {
@@ -115,4 +119,9 @@
   .player__start {
     background: url(../../icons/video/control/paused-button.svg) center center/cover no-repeat;
   }
+}
+
+#player {
+  display: none;
+  margin-bottom: -36px;
 }

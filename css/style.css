@@ -1613,6 +1613,9 @@ img {
 .player.active .player__splash:before {
   display: none;
 }
+.player.active #player {
+  display: block;
+}
 .player.active .player__controls {
   margin-top: -4px;
 }
@@ -1622,6 +1625,11 @@ img {
 
 .player.paused .player__start {
   background: url(../../icons/video/control/paused-button.svg) center center/cover no-repeat;
+}
+
+#player {
+  display: none;
+  margin-bottom: -36px;
 }
 
 .order {
