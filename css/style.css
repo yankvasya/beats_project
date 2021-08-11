@@ -1563,6 +1563,16 @@ img {
   position: absolute;
   left: 17px;
 }
+.player__mute {
+  outline: transparent;
+  border: 0px;
+  background: url(../../icons/video/control/sound-button.svg) center center/cover no-repeat;
+  height: 16px;
+  width: 11px;
+  cursor: pointer;
+  position: absolute;
+  right: 100px;
+}
 .player__playback {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1588,6 +1598,35 @@ img {
           transform: translateX(-50%);
   position: absolute;
   left: 0;
+}
+.player__sound {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  position: absolute;
+  width: 50px;
+  height: 5px;
+  right: 20px;
+  background: #333333;
+}
+.player__sound-button {
+  cursor: w-resize;
+  width: 16px;
+  height: 16px;
+  border: 8px solid #E01F3D;
+  background: #E01F3D;
+  border-radius: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  right: 0;
+}
+.player__sound-button.muted {
+  left: 0 !important;
 }
 .player #yt-player {
   display: none;
@@ -1629,7 +1668,7 @@ img {
 
 #player {
   display: none;
-  margin-bottom: -36px;
+  margin-bottom: -37px;
 }
 
 .order {

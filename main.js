@@ -477,119 +477,125 @@ if (isMobile) {
 
 // Точка невозврата
 
-let player;
-const playerContainer = $('.player');
+$(document).ready(e => {
+  let player;
+  const playerContainer = $('.player');
 
-let eventsInit = () => { // Events
-  player = document.getElementById("player");
-  $(".player__start").on('click', e => {
-    e.preventDefault();
+  let eventsInit = () => { // Events
+    player = document.getElementById("player");
+    $(".player__start").on('click', e => {
+      e.preventDefault();
 
-    if (playerContainer.hasClass('paused')) {
-      playerContainer.removeClass('paused');
-      player.pause();
-    } else {
-      playerContainer.addClass('paused');
-      player.play();
-    }
-    if (!playerContainer.hasClass('active')) {
-      playerContainer.addClass('active');
-    }
-  });
+      if (playerContainer.hasClass('paused')) {
+        playerContainer.removeClass('paused');
+        player.pause();
+      } else {
+        playerContainer.addClass('paused');
+        player.play();
+      }
+      if (!playerContainer.hasClass('active')) {
+        playerContainer.addClass('active');
+      }
+    });
 
-  $('.player__playback').on('click', e => {
-    const bar = $(e.currentTarget);
-    const clickedPosition = e.originalEvent.layerX;
-    const newButtonPositionPercent = (clickedPosition / bar.width()) * 100;
-    const newPlayBackPosition = (player.duration / 100) * newButtonPositionPercent;
+    $('.player__playback').on('click', e => {
+      const bar = $(e.currentTarget);
+      const clickedPosition = e.originalEvent.layerX;
+      const newButtonPositionPercent = (clickedPosition / bar.width()) * 100;
+      const newPlayBackPosition = (player.duration / 100) * newButtonPositionPercent;
 
-    if (!playerContainer.hasClass('active')) {
-      playerContainer.addClass('active');
-    }
+      if (!playerContainer.hasClass('active')) {
+        playerContainer.addClass('active');
+      }
 
-    if (!playerContainer.hasClass('paused')) {
-      playerContainer.addClass('paused');
-      player.play();
-    }
+      if (!playerContainer.hasClass('paused')) {
+        playerContainer.addClass('paused');
+        player.play();
+      }
 
-    $('.player__playback-button').css('left', `${newButtonPositionPercent}%`);
+      $('.player__playback-button').css('left', `${newButtonPositionPercent}%`);
 
-    player.currentTime = newPlayBackPosition;
-  });
+      player.currentTime = newPlayBackPosition;
+    });
 
-  $('.player__splash').on('click', e => {
-    if (playerContainer.hasClass('active')) {
-      playerContainer.removeClass('active'); // Удаление почему-то не работает
-    } else {
-      playerContainer.addClass('active');
-    }
+    $('.player__splash').on('click', e => {
+      if (playerContainer.hasClass('active')) {
+        playerContainer.removeClass('active'); // Удаление почему-то не работает
+      } else {
+        playerContainer.addClass('active');
+      }
 
-    if (playerContainer.hasClass('paused')) {
-      playerContainer.removeClass('paused');
-      player.pause();
-    } else {
-      playerContainer.addClass('paused');
-      player.play();
-    }
-  })
-}
+      if (playerContainer.hasClass('paused')) {
+        playerContainer.removeClass('paused');
+        player.pause();
+      } else {
+        playerContainer.addClass('paused');
+        player.play();
+      }
+    });
+    // Типо звук
+    $('.player__sound').on('click', e => {
+      const bar = $(e.currentTarget);
+      const clickedPosition = e.originalEvent.layerX;
+      const newButtonPositionPercent = (clickedPosition / bar.width()) * 100;
+      const newPlayBackPosition = (1 / 100) * newButtonPositionPercent;
 
-const formatTime = timeSec => { // Форматирование времени (добавление нулей)
-  const roundTime = Math.round(timeSec);
+      $('.player__sound-button').css('left', `${newButtonPositionPercent}%`);
 
-  const minutes = addZero(Math.floor(roundTime / 60));
-  const seconds = addZero(roundTime - minutes * 60);
+      player.volume = newPlayBackPosition;
+    });
 
-  function addZero(num) {
-    return num < 10 ? `0${num}` : `${num}`;
+    $('.player__mute').on('click', e => {
+      if (!player.muted) {
+        console.log('Мут звука');
+        // $('.player__sound-button').css('left', '0');
+        $('.player__sound-button').addClass('muted');
+        player.muted = true;
+      } else {
+        console.log('Убираем мут');
+        $('.player__sound-button').removeClass('muted');
+        player.muted = false;
+      }
+    });
   }
 
-  return `${minutes}:${seconds}`;
-}
+  const formatTime = timeSec => { // Форматирование времени (добавление нулей)
+    const roundTime = Math.round(timeSec);
 
-const onPlayerReady = e => { // Интервал обновления и само добавление таймингов
-  let interval;
-  const durationSec = player.duration;
-  const time = formatTime(durationSec);
+    const minutes = addZero(Math.floor(roundTime / 60));
+    const seconds = addZero(roundTime - minutes * 60);
 
-  $('.player__duration-estimate').text(time);
+    function addZero(num) {
+      return num < 10 ? `0${num}` : `${num}`;
+    }
 
-  if (typeof interval !== 'undefined') {
-    clearInterval(interval);
+    return `${minutes}:${seconds}`;
   }
 
-  interval = setInterval(e => {
-    const completedSec = Math.trunc(player.currentTime);
-    const completedPercent = (completedSec / durationSec) * 100;
+  const onPlayerReady = e => { // Интервал обновления и само добавление таймингов
+    let interval;
+    const durationSec = player.duration;
+    const time = formatTime(durationSec);
 
-    $('.player__playback-button').css('left', `${completedPercent}%`);
+    $('.player__duration-estimate').text(time);
 
-    $('.player__duration-completed').text(formatTime(completedSec));
-  }, 1000)
-}
+    if (typeof interval !== 'undefined') {
+      clearInterval(interval);
+    }
 
-// function onYouTubeIframeAPIReady() { // Добавление видео
-//   player.css({
-//     height: '357',
-//     width: '662',
-//     playerVars: {
-//       'playsinline': 1,
-//       controls: 0,
-//       disablekb: 0,
-//       showinfo: 0,
-//       rel: 0,
-//       autoplay: 0,
-//       modestbranding: 0
-//     },
-//     events: {
-//       'onReady': onPlayerReady,
-//       // 'onStateChange': onPlayerStateChange
-//     }
-//   });
-// }
+    interval = setInterval(e => {
+      const completedSec = Math.trunc(player.currentTime);
+      const completedPercent = (completedSec / durationSec) * 100;
 
-eventsInit();
-onPlayerReady();
+      $('.player__playback-button').css('left', `${completedPercent}%`);
+
+      $('.player__duration-completed').text(formatTime(completedSec));
+    }, 1000)
+  };
+
+  eventsInit();
+  onPlayerReady();
+})
 
 // Карта
 
