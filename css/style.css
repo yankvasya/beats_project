@@ -1526,9 +1526,11 @@ img {
   position: relative;
 }
 .player__duration {
+  font-size: small;
   color: white;
   position: absolute;
   right: 23px;
+  top: -13px;
 }
 .player__wrapper {
   width: 100%;
