@@ -1282,16 +1282,8 @@ img {
 }
 .colors .color__info.visible {
   background: #333537E5;
-  width: 32.75rem;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-}
-@media screen and (max-width: 768px) {
-  .colors .color__info.visible {
-    width: 59vw;
-    -webkit-transition: all 1s;
-    transition: all 1s;
-  }
+  -webkit-transition: width 1s;
+  transition: width 1s;
 }
 
 .feedbacks {

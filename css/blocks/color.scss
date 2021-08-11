@@ -31,7 +31,6 @@
     top: 0;
     bottom: 0;
     left: 0;
-    // flex: 1;
   }
 
   .color__block {
@@ -46,11 +45,9 @@
     display: flex;
       flex-direction: column;
     justify-content: flex-end;
-    // position: relative;
     height: 100%;
     padding-bottom: rem(54px);
     width: rem(102px);
-    // transform: rotate(-90deg);
 
     &--red {
       background: #E01F3C;
@@ -66,11 +63,6 @@
   }
 
   .color {
-    // position: absolute;
-    // top: -20px;
-    // left: -300%;
-    // width: rem(102px);
-
     white-space: nowrap;
     font-style: normal;
     font-weight: bold;
@@ -99,13 +91,6 @@
 
   .color__info.visible {
     background: #333537E5;
-    width: rem(524px);
-    transition: all 1s;
-
-    @include tablets {
-      // width: 53vw;
-      width: 59vw;
-      transition: all 1s;
-    }
+    transition: width 1s;
   }
 }

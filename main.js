@@ -164,18 +164,42 @@ $(window).on('load', e => {
   $('.bx-wrapper').addClass('container');
 });
 
+// Горизонтальный аккордеон
+
+const mesureWidth = item => {
+  const screenWidth = $(window).width();
+  const container = item.closest(".color__block");
+  const titlesBlock = container.find(".color__title");
+  const titlesWidth = titlesBlock.width() * 3;
+
+  const isMobile = window.matchMedia('(max-width: 786px)').matches;
+  // console.log(titlesWidth);
+
+  if (isMobile) {
+    return screenWidth - titlesWidth;
+  } else {
+    return 500;
+  }
+
+
+
+}
+
 $('.color__block').on('click', e => {
   const parent = e.currentTarget;
+  const target = e.target;
   const children = $(parent).find('.color__info');
+  const reqWidth = mesureWidth($(target));
+
+  // if ($('.color__info').hasClass('visible')) {
+  //   $('.color__info').removeClass('visible');
+  //   console.log('Не имеет?');
+  // }
 
   if (!$(children).hasClass('visible')) {
-    if ($('.color__info').hasClass('visible')) {
-      $('.color__info').removeClass('visible');
-    }
-    $(children).toggleClass('visible');
+    $(children).addClass('visible').width(mesureWidth($(target)));
   } else {
-    console.log('123');
-    $('.color__info').removeClass('visible');
+    $(children).removeClass('visible').width(0);
   }
 });
 
