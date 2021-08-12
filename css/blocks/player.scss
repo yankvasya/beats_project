@@ -28,7 +28,7 @@
   }
 
   &__splash {
-    background: url(../../img/video/video-short.jpg);
+    background: url(../img/video/video-short.jpg);
     height: rem(356px);
     width: 100%;
     position: relative;
@@ -42,14 +42,14 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background: url(../../icons/video/pause.svg) center center/cover no-repeat;
+      background: url(../icons/video/pause.svg) center center/cover no-repeat;
     }
   }
 
   &__start {
     outline: transparent;
     border: 0px;
-    background: url(../../icons/video/control/pause-button.svg) center center/cover no-repeat;
+    background: url(../icons/video/control/pause-button.svg) center center/cover no-repeat;
     height: 16px;
     width: 11px;
     cursor: pointer;
@@ -60,7 +60,7 @@
   &__mute {
     outline: transparent;
     border: 0px;
-    background: url(../../icons/video/control/sound-button.svg) center center/cover no-repeat;
+    background: url(../icons/video/control/sound-button.svg) center center/cover no-repeat;
     height: 16px;
     width: 11px;
     cursor: pointer;
@@ -155,7 +155,7 @@
 
 .player.paused {
   .player__start {
-    background: url(../../icons/video/control/paused-button.svg) center center/cover no-repeat;
+    background: url(../icons/video/control/paused-button.svg) center center/cover no-repeat;
   }
 }
 
