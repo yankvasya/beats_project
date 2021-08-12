@@ -1,4 +1,3 @@
-prepros.config
+/prepros.config
 
-node_modules
-node_modules/
+/node_modules
