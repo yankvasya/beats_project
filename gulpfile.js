@@ -92,6 +92,9 @@ task('copy:img', () => {
 task('copy:logo', () => {
   return src(`${SRC_PATH}/logo/*`).pipe(dest(`${DIST_PATH}/logo`));
 })
+task('copy:fonts', () => {
+  return src(`${SRC_PATH}/fonts/*`).pipe(dest(`${DIST_PATH}/fonts`));
+})
 
 task('watch', () => {
   watch(`${SRC_PATH}/css/**/*.scss`, series('styles'));
@@ -102,13 +105,13 @@ task('watch', () => {
 
 task('default',
   series('clean',
-    parallel('copy:html', 'styles', 'scripts', 'copy:icons', 'copy:video', 'copy:img', 'copy:logo'),
+    parallel('copy:html', 'styles','copy:fonts', 'scripts', 'copy:icons', 'copy:video', 'copy:img', 'copy:logo'),
     parallel('watch', 'server')
   )
 );
 
 task('build',
   series('clean',
-    parallel('copy:html', 'styles', 'scripts', 'copy:icons', 'copy:img', 'copy:video', 'copy:logo')
+    parallel('copy:html', 'styles', 'scripts','copy:fonts', 'copy:icons', 'copy:img', 'copy:video', 'copy:logo')
   )
 );

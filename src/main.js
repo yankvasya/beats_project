@@ -477,7 +477,7 @@ if (isMobile) {
 
 // Точка невозврата
 
-$(document).ready(e => {
+$(window).on('load',e => {
   let player;
   const playerContainer = $('.player');
 
