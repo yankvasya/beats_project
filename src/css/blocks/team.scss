@@ -46,10 +46,25 @@
     }
 
     &__img--tablets {
-      display: none;
+      overflow: hidden;
+      height: 0;
+      // width: 100%;
+      text-align: center;
 
+
+      // display: none;
       @include tablets {
         display: block;
+        justify-content: center;
+        align-items: center;
+        height: rem(290px);
+        width: rem(220px);
+      }
+
+
+      @include phones {
+        height: rem(180px);
+        width: rem(138px);
       }
     }
 
@@ -128,6 +143,18 @@
     &__drop.active {
       height: rem(90px);
       transition: all 1s;
+      display: flex;
+      flex-direction: column;
+
+      @include tablets {
+        align-items: center;
+        justify-content: center;
+        height: rem(399px);
+      }
+
+      @include phones {
+        height: rem(270px);
+      }
     }
   }
 }
