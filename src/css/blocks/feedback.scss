@@ -1,0 +1,160 @@
+.feedbacks {
+  height: 100%;
+  min-height: rem(650px);
+  display: flex;
+  align-items: center;
+  position: relative;
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: rem(35px);
+    height: rem(35px);
+    left: 19%;
+    bottom: -2%;
+    background: #868686;
+    border-radius: 50%;
+  }
+
+  .container {
+    padding: rem(64px) 0;
+  }
+
+  &__all {
+    margin-top: rem(32px);
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: rem(48px); // 48
+    line-height: rem(52px);
+    text-transform: uppercase;
+    text-align: center;
+    color: #292929;
+  }
+
+  .feedback.feedback--active {
+    display: flex;
+
+  }
+
+  .feedback {
+    padding: rem(42px);
+    display: none;
+    background: #F8FAF9;
+    overflow: hidden;
+    position: relative;
+    min-height: 280px;
+
+    @include tablets {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      padding: rem(46px) rem(24px) rem(30px);
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: rem(83px);
+      height: rem(83px);
+      background: #fff;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: rem(-61px);
+    }
+
+    &__img {
+      max-width: rem(253px);
+      height: rem(264px);
+
+      @include tablets {
+        max-width: rem(130px);
+        height: rem(130px);
+      }
+    }
+
+    &__info {
+      margin-left: rem(40px);
+      padding: rem(32px) 0 rem(21px);
+      display: flex;
+      flex-direction: column;
+
+      @include tablets {
+        justify-self: center;
+        margin-left: 0;
+      }
+    }
+
+    &__title {
+      font-style: normal;
+      font-weight: bold;
+      font-size: rem(24px); // 24
+      line-height: rem(28px);
+      color: #292929;
+    }
+
+    &__text {
+      margin-right: rem(107px);
+      flex: 1;
+      margin-top: rem(27px);
+      font-style: normal;
+      font-weight: normal;
+      font-size: rem(16px); // 16
+      line-height: rem(19px);
+      color: #666666;
+
+      @include tablets {
+        justify-self: center;
+        margin-right: 0;
+      }
+    }
+
+    &__author {
+      margin-top: rem(16px);
+      display: flex;
+      justify-self: flex-end;
+      font-style: normal;
+      font-weight: bold;
+      font-size: rem(18px); // 18
+      line-height: rem(21px);
+      color: #292929;
+
+      @include tablets {
+        align-self: center;
+      }
+    }
+
+    &__select {
+      display: inline-flex;
+      margin-top: rem(15px);
+      display: flex;
+      justify-content: center;
+
+    
+
+      .person {
+        user-select: none;
+        border: rem(4px) solid transparent;
+
+        &:nth-child(2) {
+          margin: 0 rem(6px);
+        }
+
+        &--active {
+          border: rem(4px) solid #E01F3D;
+          border-radius: rem(103px);
+        }
+
+        &:hover {
+          border: rem(4px) solid #E01F3D;
+          border-radius: rem(103px);
+        }
+      }
+    }
+  }
+}

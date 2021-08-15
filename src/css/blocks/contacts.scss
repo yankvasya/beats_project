@@ -1,0 +1,54 @@
+.contacts {
+  display: flex;
+  justify-self: flex-end;
+  align-items: center;
+
+  &:hover {
+    a {
+      color: red;
+      transition: 1s;
+    }
+    svg {
+      fill: red;
+      transition: 1s;
+
+    }
+  }
+
+  &__phone {
+    position: relative;
+    flex-shrink: 0;
+
+    
+
+    &:before {
+      display: block;
+      width: rem(6px);
+      height: rem(18px);
+      left: rem(-6px);
+      content: ' ';
+      position: absolute;
+    }
+
+    margin-left: rem(6px);
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(18px); // 18
+    line-height: rem(18px);
+    color: #292929;
+  }
+}
+
+.contact {
+  &:hover {
+    a {
+      img {
+        content: url("../icons/phone-hover.png");
+        width: 14px;
+        height: 15px;
+      }
+
+      color: red;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.how {
+  height: 100%;
+  padding: rem(58px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F8FAF9;
+
+  &__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: rem(48px);
+    line-height: rem(52px);
+    text-align: center;
+    text-transform: uppercase;
+    color: #292929;
+    margin-bottom: rem(44px);
+  }
+}

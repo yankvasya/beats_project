@@ -1,0 +1,31 @@
+.menu {
+  flex: 1;
+  margin: 0 rem(46px) 0 rem(38px);
+
+  @include tablets {
+    display: none;
+  }
+
+  & .menu__list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    & .menu__item {
+        margin-bottom: rem(5px);
+      & .menu__link {
+        font-family: Alegreya Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: rem(18px); // 18
+        line-height: rem(20px);
+        color: #292929;
+        white-space: nowrap;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
