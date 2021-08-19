@@ -2,6 +2,9 @@
 
 ## SCSS, JS, JQUERY, BEM, API
 
+node_modules
+```npm install```
+
 dev
 ```npm run gulp```
 
