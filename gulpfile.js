@@ -1,5 +1,5 @@
 const { src, dest, task, series, watch, parallel } = require('gulp');
-const clean = require('gulp-clean');
+const rm = require("gulp-rm");
 const sass = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
@@ -22,9 +22,8 @@ const env = process.env.NODE_ENV;
 const { SRC_PATH, DIST_PATH, STYLES_LIBS, JS_LIBS } = require('./gulp.config');
 
 task('clean', () => {
-  console.log(env);
   return src(`${DIST_PATH}/**/*`, { read: false })
-    .pipe(clean());
+    .pipe(rm());
 });
 
 task('copy:html', () => {
