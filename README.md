@@ -1,6 +1,6 @@
 # BEATS
 
-## SCSS, JS, JQUERY, BEM, API
+## SCSS, JS, JQUERY, BEM, AJAX
 
 node_modules
 ```npm install```
