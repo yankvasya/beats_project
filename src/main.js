@@ -160,6 +160,14 @@ $(window).on('load', e => {
 });
 
 // Горизонтальный аккордеон
+const hideColorsBlocks = () => {
+  const remove = $('.color__block');
+  const parent = $('.visible').closest('.color__block');
+
+  $(remove).removeClass('fixed');
+
+  $(parent).addClass('fixed');
+}
 
 const mesureWidth = item => {
   let reqItemWidth = 0;
@@ -167,6 +175,7 @@ const mesureWidth = item => {
   const container = item.closest(".color__block");
   const titlesBlock = container.find(".color__title");
   const titlesWidth = titlesBlock.width() * 3;
+  const titleWidth = titlesBlock.width();
 
   // console.log(container.find('.color__info'));
 
@@ -176,10 +185,13 @@ const mesureWidth = item => {
 
   console.log(`padding: left(${paddingLeft}px) and right(${paddingRight}px)`);
 
-  const isMobile = window.matchMedia('(max-width: 786px)').matches;
+  const isTablet = window.matchMedia('(max-width: 786px)').matches;
+  const IsPhone = window.matchMedia('(max-width: 480px)').matches;
   // console.log(titlesWidth);
 
-  if (isMobile) {
+  if (IsPhone) {
+    reqItemWidth = screenWidth - titleWidth;
+  } else if (isTablet) {
     reqItemWidth = screenWidth - titlesWidth;
   } else {
     reqItemWidth = 500;
@@ -200,14 +212,16 @@ $('.color__block').on('click', e => {
 
   if (!$(children).hasClass('visible')) {
     $('.color__info').removeClass('visible').width(0);
-    console.log('Лишные блоки закрыты');
+    // console.log('Лишные блоки закрыты');
     $(children).addClass('visible').width(reqWidth.container);
     $(textBlock).width(reqWidth.textContainer)
   } else {
     $('.color__info').removeClass('visible').width(0);
-    console.log('Лишные блоки закрыты');
+    // console.log('Лишные блоки закрыты');
     $(children).removeClass('visible').width(0);
   }
+  hideColorsBlocks();
+
 });
 
 // OnePageScroll
@@ -332,7 +346,7 @@ $(window).on('keydown', e => { // стрелки
 $('.wrapper').on('touchmove', e => e.preventDefault());
 
 
-$('[data-scroll-to]').click(e => {
+$('[data-scroll-to]').on('click',e => {
   e.preventDefault();
 
   const $this = $(e.currentTarget);
@@ -360,124 +374,9 @@ if (isMobile) {
   });
 };
 
-// let player;
-// const playerContainer = $('.player');
+// Точка плеер
 
-// let eventsInit = () => { // Events
-//   $(".player__start").on('click', e => {
-//     e.preventDefault();
-
-//     if (playerContainer.hasClass('paused')) {
-//       playerContainer.removeClass('paused');
-//       player.pauseVideo();
-//     } else {
-//       playerContainer.addClass('paused');
-//       player.playVideo();
-//     }
-//     if (!playerContainer.hasClass('active')) {
-//       playerContainer.addClass('active');
-//     }
-//   });
-
-//   $('.player__playback').on('click', e => {
-//     const bar = $(e.currentTarget);
-//     const clickedPosition = e.originalEvent.layerX;
-//     const newButtonPositionPercent = (clickedPosition / bar.width()) * 100;
-//     const newPlayBackPosition = (player.getDuration() / 100) * newButtonPositionPercent;
-
-//     if (!playerContainer.hasClass('active')) {
-//       playerContainer.addClass('active');
-//     }
-
-//     if (!playerContainer.hasClass('paused')) {
-//       playerContainer.addClass('paused');
-//       player.playVideo();
-//     }
-
-//     $('.player__playback-button').css('left', `${newButtonPositionPercent}%`);
-
-//     player.seekTo(newPlayBackPosition);
-//     // console.log(e.originalEvent);
-//     // console.log(buttonPosition);
-//     console.log(e.currentTarget);
-
-//   });
-
-//   $('.player__splash').on('click', e => {
-//     playerContainer.addClass('active');
-//     if (playerContainer.hasClass('paused')) {
-//       playerContainer.removeClass('paused');
-//       player.pauseVideo();
-//     } else {
-//       playerContainer.addClass('paused');
-//       player.playVideo();
-//     }
-//     if (!playerContainer.hasClass('active')) {
-//       playerContainer.addClass('active');
-//     }
-//   })
-// }
-
-// const formatTime = timeSec => { // Форматирование времени (добавление нулей)
-//   const roundTime = Math.round(timeSec);
-
-//   const minutes = addZero(Math.floor(roundTime / 60));
-//   const seconds = addZero(roundTime - minutes * 60);
-
-//   function addZero(num) {
-//     return num < 10 ? `0${num}` : `${num}`;
-//   }
-
-//   return `${minutes}:${seconds}`;
-// }
-
-// const onPlayerReady = e => { // Интервал обновления и само добавление таймингов
-//   let interval;
-//   const durationSec = player.getDuration();
-//   const time = formatTime(durationSec);
-
-//   $('.player__duration-estimate').text(time);
-
-//   if (typeof interval !== 'undefined') {
-//     clearInterval(interval);
-//   }
-
-//   interval = setInterval(e => {
-//     const completedSec = Math.trunc(player.getCurrentTime());
-//     const completedPercent = (completedSec / durationSec) * 100;
-
-//     $('.player__playback-button').css('left', `${completedPercent}%`);
-
-//     $('.player__duration-completed').text(formatTime(completedSec));
-//   }, 1000)
-// }
-
-// function onYouTubeIframeAPIReady() { // Добавление видео
-//   player = new YT.Player('yt-player', {
-//     height: '357',
-//     width: '662',
-//     videoId: 'nxg4C365LbQ',
-//     playerVars: {
-//       'playsinline': 1,
-//       controls: 0,
-//       disablekb: 0,
-//       showinfo: 0,
-//       rel: 0,
-//       autoplay: 0,
-//       modestbranding: 0
-//     },
-//     events: {
-//       'onReady': onPlayerReady,
-//       // 'onStateChange': onPlayerStateChange
-//     }
-//   });
-// }
-
-// eventsInit();
-
-// Точка невозврата
-
-$(window).on('load',e => {
+$(window).on('load', e => {
   let player;
   const playerContainer = $('.player');
 

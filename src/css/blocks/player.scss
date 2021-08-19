@@ -36,7 +36,7 @@
   }
 
   &__splash {
-    background: url(../img/video/video-short.jpg);
+    background: url(../img/video/video-short.jpg) center bottom/contain no-repeat;
     height: rem(356px);
     width: 100%;
     position: relative;
@@ -51,6 +51,10 @@
       left: 50%;
       transform: translate(-50%, -50%);
       background: url(../icons/video/pause.svg) center center/cover no-repeat;
+
+      @include phones {
+        top: 70%;
+      }
     }
   }
 

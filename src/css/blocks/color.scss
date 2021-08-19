@@ -39,15 +39,27 @@
     align-items: center;
     justify-content: center;
     height: 100%;
+    position: static;
+    transition: position 1s;
+
+    &.fixed {
+      position: fixed;
+      z-index: 1;
+      transition: all 1s;
+    }
   }
 
   .color__title {
     display: flex;
-      flex-direction: column;
+    flex-direction: column;
     justify-content: flex-end;
     height: 100%;
     padding-bottom: rem(54px);
     width: rem(102px);
+
+    @include phones {
+      width: rem(80px);
+    }
 
     &--red {
       background: #E01F3C;
