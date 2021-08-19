@@ -138,9 +138,9 @@ form.addEventListener('submit', function (e) {
         $('#modal').css('display', 'flex');
       },
       error: date => {
-        $('#modal').addClass('error-modal');
+        $(modal).addClass('error-modal');
         contModal.text(date.responseJSON.message);
-        $('#modal').css('display', 'flex');
+        $(modal).css('display', 'flex');
       }
     });
 
@@ -155,7 +155,7 @@ $('.button--model').on('click', e => {
   $('#modal').hide();
 });
 
-$(window).on('load', e => {
+$(window).on('load', () => {
   $('.bx-wrapper').addClass('container');
 });
 
@@ -372,11 +372,11 @@ if (isMobile) {
       scroller[scrollDirection]();
     }
   });
-};
+}
 
 // Точка плеер
 
-$(window).on('load', e => {
+$(window).on('load', () => {
   let player;
   const playerContainer = $('.player');
 
@@ -417,7 +417,7 @@ $(window).on('load', e => {
       player.currentTime = newPlayBackPosition;
     });
 
-    $('.player__splash').on('click', e => {
+    $('.player__splash').on('click', () => {
       if (playerContainer.hasClass('active')) {
         playerContainer.removeClass('active'); // Удаление почему-то не работает
       } else {
@@ -444,7 +444,7 @@ $(window).on('load', e => {
       player.volume = newPlayBackPosition;
     });
 
-    $('.player__mute').on('click', e => {
+    $('.player__mute').on('click', () => {
       if (!player.muted) {
         console.log('Мут звука');
         // $('.player__sound-button').css('left', '0');
@@ -471,7 +471,7 @@ $(window).on('load', e => {
     return `${minutes}:${seconds}`;
   }
 
-  const onPlayerReady = e => { // Интервал обновления и само добавление таймингов
+  const onPlayerReady = () => { // Интервал обновления и само добавление таймингов
     let interval;
     const durationSec = player.duration;
     const time = formatTime(durationSec);
@@ -482,7 +482,7 @@ $(window).on('load', e => {
       clearInterval(interval);
     }
 
-    interval = setInterval(e => {
+    interval = setInterval(() => {
       const completedSec = Math.trunc(player.currentTime);
       const completedPercent = (completedSec / durationSec) * 100;
 
