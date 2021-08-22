@@ -70,13 +70,25 @@ $('.person').on('click', e => {
   itemToShow.addClass('feedback--active').siblings().removeClass('feedback--active');
 });
 
-$('.slider').bxSlider({
-  pager: false,
-  controls: true,
-  keyboardEnabled: false,
-  // oneToOneTouch: false
-  touchEnabled: false
-});
+
+
+if (window.matchMedia('(max-width: 768px)').matches) {
+  $('.slider').bxSlider({
+    pager: true,
+    controls: true,
+    keyboardEnabled: true,
+    oneToOneTouch: true,
+    touchEnabled: true
+  });
+} else {
+  $('.slider').bxSlider({
+    pager: false,
+    controls: true,
+    keyboardEnabled: false,
+    // oneToOneTouch: false
+    touchEnabled: false
+  });
+}
 
 const form = document.querySelector('.form'); /* форма */
 
@@ -209,6 +221,8 @@ $('.color__block').on('click', e => {
   const children = $(parent).find('.color__info');
   const reqWidth = mesureWidth($(target));
   const textBlock = children.find('.color__text');
+  const isPhone = window.matchMedia('(max-width: 480px)').matches;
+
 
   if (!$(children).hasClass('visible')) {
     $('.color__info').removeClass('visible').width(0);
@@ -220,7 +234,9 @@ $('.color__block').on('click', e => {
     // console.log('Лишные блоки закрыты');
     $(children).removeClass('visible').width(0);
   }
+if (isPhone) {
   hideColorsBlocks();
+}
 
 });
 

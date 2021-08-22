@@ -25,7 +25,7 @@
     "browser-sync": "^2.27.5",
     "cross-env": "^7.0.3",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^8.0.0",
+    "gulp-autoprefixer": "^6.1.0",
     "gulp-babel": "^8.0.0",
     "gulp-clean": "^0.4.0",
     "gulp-clean-css": "^4.3.0",
@@ -47,6 +47,9 @@
     "jquery": "^3.6.0",
     "jquery-touchswipe": "^1.6.19",
     "mobile-detect": "^1.4.5",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "graceful-fs": {
+      "version": "4.2.2"
+    }
   }
 }
