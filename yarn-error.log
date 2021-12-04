@@ -1,0 +1,87 @@
+Arguments: 
+  /usr/bin/node /usr/share/yarn/bin/yarn.js prod
+
+PATH: 
+  /home/enotuk/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/d/_projects/_govno/beats_project/node_modules/.bin:/mnt/c/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64_win/compiler:/mnt/c/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Microsoft SQL Server/120/Tools/Binn/:/mnt/c/Program Files/Common Files/Autodesk Shared/:/mnt/c/Program Files/Git/cmd:/mnt/d/[Progs]/node.js/:/mnt/c/ProgramData/chocolatey/bin:/mnt/d/_progs/node.js:/mnt/c/Users/Admin/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Admin/AppData/Local/atom/bin:/mnt/c/Users/Admin/AppData/Roaming/npm:/mnt/c/Users/Admin/AppData/Local/hyper/app-3.0.2/resources/bin:/mnt/c/Users/Admin/AppData/Local/Microsoft/WindowsApps:/mnt/c/php8:/mnt/d/_progs/PhpStorm 2021.2.2/bin:/snap/bin
+
+Yarn version: 
+  1.22.15
+
+Node version: 
+  14.17.5
+
+Platform: 
+  linux x64
+
+Trace: 
+  TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received [Object: null prototype]
+      at validateString (internal/validators.js:124:11)
+      at Object.isAbsolute (path.js:1133:5)
+      at module.exports.exports.default (/usr/share/yarn/lib/cli.js:101160:16)
+      at /usr/share/yarn/lib/cli.js:51705:63
+      at Generator.next (<anonymous>)
+      at step (/usr/share/yarn/lib/cli.js:310:30)
+      at /usr/share/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "beats",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "gulp": "cross-env NODE_ENV=dev gulp",
+      "build": "cross-env NODE_ENV=prod gulp build"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/yankvasya/gulp_learn.git"
+    },
+    "keywords": [],
+    "author": "yankvasya",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/yankvasya/gulp_learn/issues"
+    },
+    "homepage": "https://github.com/yankvasya/gulp_learn#readme",
+    "devDependencies": {
+      "@babel/core": "^7.15.0",
+      "@babel/preset-env": "^7.15.0",
+      "browser-sync": "^2.27.5",
+      "cross-env": "^7.0.3",
+      "gulp": "^4.0.2",
+      "gulp-autoprefixer": "^6.1.0",
+      "gulp-babel": "^8.0.0",
+      "gulp-clean": "^0.4.0",
+      "gulp-clean-css": "^4.3.0",
+      "gulp-concat": "^2.6.1",
+      "gulp-group-css-media-queries": "^1.2.2",
+      "gulp-if": "^3.0.0",
+      "gulp-rm": "^2.0.0",
+      "gulp-sass": "^5.0.0",
+      "gulp-sass-glob": "^1.1.0",
+      "gulp-smile-px2rem": "^0.1.0",
+      "gulp-sourcemaps": "^3.0.0",
+      "gulp-svg-sprite": "^1.5.0",
+      "gulp-svgo": "^2.2.1",
+      "gulp-uglify": "^3.0.2",
+      "sass": "^1.37.5"
+    },
+    "dependencies": {
+      "bxslider": "^4.2.14",
+      "jquery": "^3.6.0",
+      "jquery-touchswipe": "^1.6.19",
+      "mobile-detect": "^1.4.5",
+      "normalize.css": "^8.0.1",
+      "graceful-fs": {
+        "version": "4.2.2"
+      }
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
