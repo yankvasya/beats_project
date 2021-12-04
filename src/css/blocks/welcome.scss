@@ -7,7 +7,7 @@
 
   .container {
     padding: rem(94px) 0 rem(50px);
-    background-image: url(../img/headphones-header.png);
+    background-image: url('./img/headphones-header.png');
     background-position: bottom 71% left 61%;
     background-repeat: no-repeat;
     background-size: rem(489px);
@@ -37,7 +37,7 @@
 
       &:before {
         content: "";
-        background: url("../img/tablets/headphones-header.png") center center/contain no-repeat;
+        background: url("./img/tablets/headphones-header.png") center center/contain no-repeat;
         height: rem(323px);
         width: rem(323px);
 

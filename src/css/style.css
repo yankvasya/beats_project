@@ -1536,7 +1536,7 @@ img {
   width: 100%;
 }
 .player__splash {
-  background: url(../img/video/video-short.jpg);
+  background: url('./img/video/video-short.jpg');
   height: 22.25rem;
   width: 100%;
   position: relative;
@@ -1551,12 +1551,12 @@ img {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background: url(../icons/video/pause.svg) center center/cover no-repeat;
+  background: url('./icons/video/pause.svg') center center/cover no-repeat;
 }
 .player__start {
   outline: transparent;
   border: 0px;
-  background: url(../icons/video/control/pause-button.svg) center center/cover no-repeat;
+  background: url('./icons/video/control/pause-button.svg') center center/cover no-repeat;
   height: 16px;
   width: 11px;
   cursor: pointer;
@@ -1663,7 +1663,7 @@ img {
 }
 
 .player.paused .player__start {
-  background: url(../icons/video/control/paused-button.svg) center center/cover no-repeat;
+  background: url('./icons/video/control/paused-button.svg') center center/cover no-repeat;
 }
 
 #player {
@@ -1677,7 +1677,7 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: url("../img/form-bg.jpg") center center/cover no-repeat;
+  background: url("./img/form-bg.jpg") center center/cover no-repeat;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1851,7 +1851,7 @@ img {
   border-radius: 0;
 }
 .radio--checkbox .radio__visible:before {
-  background: url("../icons/checkbox.svg") center center/contain no-repeat;
+  background: url("./icons/checkbox.svg") center center/contain no-repeat;
 }
 .radio__elem {
   display: none;
