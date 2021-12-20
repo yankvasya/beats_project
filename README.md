@@ -1,6 +1,6 @@
 # BEATS
 
-## SCSS, JS, JQUERY, BEM, AJAX
+## jQuery, Scss, BEM, Ajax, Gulp
 
 node_modules
 ```npm install```
