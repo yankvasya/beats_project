@@ -294,7 +294,7 @@
   }
 
   .bx-prev {
-    background: url(../icons/left.svg) center center / contain no-repeat;
+    background: url(./icons/left.svg) center center / contain no-repeat;
   }
 
   .bx-next:hover {
@@ -310,7 +310,7 @@
     background-position: unset;
     opacity: 1 !important;
 
-    background: url(../icons/right.svg) center center / contain no-repeat;
+    background: url(./icons/right.svg) center center / contain no-repeat;
   }
 }
 
